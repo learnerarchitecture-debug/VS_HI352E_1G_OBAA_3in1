@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archinsights - Wooden Work Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">
+                <svg viewBox="0 0 40 40" class="logo-icon">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#D4A574"/>
+                            <stop offset="100%" style="stop-color:#8B5E3C"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="2" y="2" width="36" height="36" rx="8" fill="url(#logoGrad)"/>
+                    <rect x="8" y="10" width="10" height="20" rx="2" fill="#FFF5E6"/>
+                    <rect x="22" y="10" width="10" height="20" rx="2" fill="#FFF5E6"/>
+                    <circle cx="16" cy="20" r="2" fill="#FFD700"/>
+                    <circle cx="24" cy="20" r="2" fill="#FFD700"/>
+                </svg>
+                <span class="logo-text">Archinsights</span>
+            </div>
+            <div class="nav-section">
+                <div class="nav-label">Components</div>
+                <button class="nav-item active" onclick="switchTab('wardrobe')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><rect x="5" y="5" width="6" height="14" rx="1" fill="currentColor"/><rect x="13" y="5" width="6" height="14" rx="1" fill="currentColor"/></svg>
+                    <span>Wardrobe</span>
+                </button>
+                <button class="nav-item" onclick="switchTab('drawer')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><rect x="5" y="6" width="14" height="4" rx="1" fill="currentColor"/><rect x="5" y="12" width="14" height="4" rx="1" fill="currentColor"/></svg>
+                    <span>Drawer</span>
+                </button>
+                <button class="nav-item" onclick="switchTab('shelf')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><rect x="5" y="8" width="14" height="2" rx="1" fill="currentColor"/><rect x="5" y="14" width="14" height="2" rx="1" fill="currentColor"/></svg>
+                    <span>Shelf</span>
+                </button>
+                <button class="nav-item" onclick="switchTab('door')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><rect x="7" y="5" width="10" height="14" rx="1" fill="currentColor"/><circle cx="15" cy="12" r="1.5" fill="#FFD700"/></svg>
+                    <span>Door</span>
+                </button>
+            </div>
+            <div class="nav-section">
+                <div class="nav-label">Tools</div>
+                <button class="nav-item" onclick="switchTab('material')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><rect x="5" y="5" width="6" height="6" rx="1" fill="#E8B87C"/><rect x="13" y="5" width="6" height="6" rx="1" fill="#8B5E3C"/><rect x="5" y="13" width="6" height="6" rx="1" fill="#D2691E"/><rect x="13" y="13" width="6" height="6" rx="1" fill="#CD853F"/></svg>
+                    <span>Material</span>
+                </button>
+                <button class="nav-item" onclick="switchTab('animation')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><polygon points="10,8 18,12 10,16" fill="currentColor"/></svg>
+                    <span>Animation</span>
+                </button>
+                <button class="nav-item" onclick="switchTab('hardware')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><circle cx="9" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="9" width="6" height="2" rx="1" fill="currentColor"/><rect x="14" y="13" width="6" height="2" rx="1" fill="currentColor"/></svg>
+                    <span>Hardware</span>
+                </button>
+            </div>
+            <div class="nav-section">
+                <div class="nav-label">Utilities</div>
+                <button class="nav-item" onclick="switchTab('cutlist')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><rect x="6" y="6" width="12" height="12" rx="1" fill="white"/><line x1="8" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="14" x2="16" y2="14" stroke="currentColor" stroke-width="1.5"/></svg>
+                    <span>Cutlist</span>
+                </button>
+                <button class="nav-item" onclick="switchTab('cost')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><circle cx="12" cy="12" r="7" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="white">$</text></svg>
+                    <span>Cost</span>
+                </button>
+                <button class="nav-item" onclick="switchTab('templates')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><rect x="5" y="5" width="6" height="6" rx="1" fill="currentColor"/><rect x="13" y="5" width="6" height="6" rx="1" fill="currentColor"/><rect x="5" y="13" width="6" height="6" rx="1" fill="currentColor"/><rect x="13" y="13" width="6" height="6" rx="1" fill="currentColor"/></svg>
+                    <span>Templates</span>
+                </button>
+                <button class="nav-item" onclick="switchTab('export')">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.2"/><path d="M12 5 L12 15 M8 11 L12 15 L16 11" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6 17 L6 19 Q6 20 7 20 L17 20 Q18 20 18 19 L18 17" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                    <span>Export</span>
+                </button>
+            </div>
+        </nav>
+
+        <main class="content">
+            <!-- WARDROBE TAB -->
+            <div class="tab-content active" id="tab-wardrobe">
+                <div class="panel-header">
+                    <h2>Wardrobe Designer</h2>
+                    <p class="subtitle">Configure your custom wardrobe with precision</p>
+                </div>
+                <div class="panel-body">
+                    <div class="form-grid">
+                        <div class="form-group"><label>Width (mm)</label><input type="number" id="wardrobe-width" value="1200" min="400" max="3000"></div>
+                        <div class="form-group"><label>Height (mm)</label><input type="number" id="wardrobe-height" value="2400" min="1000" max="3000"></div>
+                        <div class="form-group"><label>Depth (mm)</label><input type="number" id="wardrobe-depth" value="600" min="300" max="900"></div>
+                        <div class="form-group"><label>Shelves</label><input type="number" id="wardrobe-shelves" value="3" min="0" max="10"></div>
+                        <div class="form-group"><label>Hanging Rods</label><input type="number" id="wardrobe-rods" value="1" min="0" max="3"></div>
+                        <div class="form-group"><label>Drawers</label><input type="number" id="wardrobe-drawers" value="0" min="0" max="4"></div>
+                        <div class="form-group full-width"><label>Door Style</label>
+                            <select id="wardrobe-doors"><option value="hinged">Hinged Doors</option><option value="sliding">Sliding Doors</option><option value="bifold">Bi-Fold Doors</option><option value="none">No Doors</option></select>
+                        </div>
+                        <div class="form-group full-width"><label>Material</label>
+                            <select id="wardrobe-material"><option value="oak">Oak Wood</option><option value="walnut">Walnut Wood</option><option value="cherry">Cherry Wood</option><option value="maple">Maple Wood</option><option value="pine">Pine Wood</option></select>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="callSketchup('create_wardrobe', getWardrobeParams())">Create Wardrobe</button>
+                        <button class="btn btn-secondary" onclick="callSketchup('preview_wardrobe', getWardrobeParams())">Preview</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DRAWER TAB -->
+            <div class="tab-content" id="tab-drawer">
+                <div class="panel-header"><h2>Drawer Designer</h2><p class="subtitle">Configure custom drawer units</p></div>
+                <div class="panel-body">
+                    <div class="form-grid">
+                        <div class="form-group"><label>Width (mm)</label><input type="number" id="drawer-width" value="600" min="200" max="1500"></div>
+                        <div class="form-group"><label>Height (mm)</label><input type="number" id="drawer-height" value="800" min="200" max="1500"></div>
+                        <div class="form-group"><label>Depth (mm)</label><input type="number" id="drawer-depth" value="500" min="200" max="800"></div>
+                        <div class="form-group"><label>Drawer Count</label><input type="number" id="drawer-count" value="3" min="1" max="8"></div>
+                        <div class="form-group"><label>Each Height (mm)</label><input type="number" id="drawer-each-height" value="200" min="80" max="400"></div>
+                        <div class="form-group"><label>Handle Style</label>
+                            <select id="drawer-handle"><option value="bar">Bar Handle</option><option value="knob">Knob</option><option value="recessed">Recessed</option><option value="touch">Touch Latch</option></select>
+                        </div>
+                        <div class="form-group full-width"><label>Slide Type</label>
+                            <select id="drawer-slide"><option value="full">Full Extension</option><option value="partial">Partial Extension</option><option value="undermount">Undermount</option></select>
+                        </div>
+                        <div class="form-group full-width"><label>Material</label>
+                            <select id="drawer-material"><option value="oak">Oak Wood</option><option value="walnut">Walnut Wood</option><option value="cherry">Cherry Wood</option><option value="maple">Maple Wood</option><option value="pine">Pine Wood</option></select>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="callSketchup('create_drawer', getDrawerParams())">Create Drawer Unit</button>
+                        <button class="btn btn-secondary" onclick="callSketchup('preview_drawer', getDrawerParams())">Preview</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SHELF TAB -->
+            <div class="tab-content" id="tab-shelf">
+                <div class="panel-header"><h2>Shelf Designer</h2><p class="subtitle">Configure custom shelving solutions</p></div>
+                <div class="panel-body">
+                    <div class="form-grid">
+                        <div class="form-group"><label>Width (mm)</label><input type="number" id="shelf-width" value="800" min="200" max="2000"></div>
+                        <div class="form-group"><label>Depth (mm)</label><input type="number" id="shelf-depth" value="300" min="100" max="600"></div>
+                        <div class="form-group"><label>Thickness (mm)</label><input type="number" id="shelf-thickness" value="18" min="12" max="50"></div>
+                        <div class="form-group"><label>Shelf Count</label><input type="number" id="shelf-count" value="4" min="2" max="12"></div>
+                        <div class="form-group"><label>Spacing (mm)</label><input type="number" id="shelf-spacing" value="300" min="100" max="600"></div>
+                        <div class="form-group"><label>Style</label>
+                            <select id="shelf-style"><option value="floating">Floating</option><option value="bracket">Bracket Supported</option><option value="ledger">Ledger Supported</option></select>
+                        </div>
+                        <div class="form-group full-width"><label>Material</label>
+                            <select id="shelf-material"><option value="oak">Oak Wood</option><option value="walnut">Walnut Wood</option><option value="cherry">Cherry Wood</option><option value="maple">Maple Wood</option><option value="pine">Pine Wood</option></select>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="callSketchup('create_shelf', getShelfParams())">Create Shelf Unit</button>
+                        <button class="btn btn-secondary" onclick="callSketchup('preview_shelf', getShelfParams())">Preview</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOOR TAB -->
+            <div class="tab-content" id="tab-door">
+                <div class="panel-header"><h2>Door Designer</h2><p class="subtitle">Configure cabinet and room doors</p></div>
+                <div class="panel-body">
+                    <div class="form-grid">
+                        <div class="form-group"><label>Width (mm)</label><input type="number" id="door-width" value="400" min="200" max="1000"></div>
+                        <div class="form-group"><label>Height (mm)</label><input type="number" id="door-height" value="700" min="300" max="2400"></div>
+                        <div class="form-group"><label>Thickness (mm)</label><input type="number" id="door-thickness" value="18" min="12" max="40"></div>
+                        <div class="form-group"><label>Door Type</label>
+                            <select id="door-type"><option value="hinged">Hinged</option><option value="sliding">Sliding</option><option value="bifold">Bi-Fold</option><option value="pocket">Pocket</option></select>
+                        </div>
+                        <div class="form-group"><label>Panel Style</label>
+                            <select id="door-panel"><option value="flat">Flat Panel</option><option value="raised">Raised Panel</option><option value="shaker">Shaker</option><option value="glass">Glass Insert</option></select>
+                        </div>
+                        <div class="form-group"><label>Handle</label>
+                            <select id="door-handle"><option value="bar">Bar Pull</option><option value="knob">Knob</option><option value="recessed">Recessed</option><option value="push">Push to Open</option></select>
+                        </div>
+                        <div class="form-group full-width"><label>Material</label>
+                            <select id="door-material"><option value="oak">Oak Wood</option><option value="walnut">Walnut Wood</option><option value="cherry">Cherry Wood</option><option value="maple">Maple Wood</option><option value="pine">Pine Wood</option></select>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="callSketchup('create_door', getDoorParams())">Create Door</button>
+                        <button class="btn btn-secondary" onclick="callSketchup('preview_door', getDoorParams())">Preview</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MATERIAL TAB -->
+            <div class="tab-content" id="tab-material">
+                <div class="panel-header"><h2>Material Library</h2><p class="subtitle">Select and customize wood materials</p></div>
+                <div class="panel-body">
+                    <h4 style="margin-bottom:12px;color:var(--text-secondary)">Wood Types</h4>
+                    <div class="material-grid">
+                        <div class="material-card selected" onclick="selectMaterial('oak')"><div class="material-preview" style="background:linear-gradient(135deg,#D4A574,#C49A6C)"></div><div class="material-name">Oak</div></div>
+                        <div class="material-card" onclick="selectMaterial('walnut')"><div class="material-preview" style="background:linear-gradient(135deg,#5C4033,#3E2723)"></div><div class="material-name">Walnut</div></div>
+                        <div class="material-card" onclick="selectMaterial('cherry')"><div class="material-preview" style="background:linear-gradient(135deg,#8B4513,#A0522D)"></div><div class="material-name">Cherry</div></div>
+                        <div class="material-card" onclick="selectMaterial('maple')"><div class="material-preview" style="background:linear-gradient(135deg,#E8D4B8,#D4C4A8)"></div><div class="material-name">Maple</div></div>
+                        <div class="material-card" onclick="selectMaterial('pine')"><div class="material-preview" style="background:linear-gradient(135deg,#E8C77C,#D4B36C)"></div><div class="material-name">Pine</div></div>
+                        <div class="material-card" onclick="selectMaterial('teak')"><div class="material-preview" style="background:linear-gradient(135deg,#9B7B4C,#7D6340)"></div><div class="material-name">Teak</div></div>
+                        <div class="material-card" onclick="selectMaterial('ebony')"><div class="material-preview" style="background:linear-gradient(135deg,#2C1B0E,#1A1008)"></div><div class="material-name">Ebony</div></div>
+                        <div class="material-card" onclick="selectMaterial('ash')"><div class="material-preview" style="background:linear-gradient(135deg,#C8B89A,#B8A88A)"></div><div class="material-name">Ash</div></div>
+                    </div>
+                    <h4 style="margin:20px 0 12px;color:var(--text-secondary)">Laminate Options</h4>
+                    <div class="material-grid">
+                        <div class="material-card" onclick="selectMaterial('white_lam')"><div class="material-preview" style="background:#F5F5F5"></div><div class="material-name">White</div></div>
+                        <div class="material-card" onclick="selectMaterial('grey_lam')"><div class="material-preview" style="background:#808080"></div><div class="material-name">Grey</div></div>
+                        <div class="material-card" onclick="selectMaterial('black_lam')"><div class="material-preview" style="background:#2C2C2C"></div><div class="material-name">Black</div></div>
+                        <div class="material-card" onclick="selectMaterial('beige_lam')"><div class="material-preview" style="background:#D4C4A8"></div><div class="material-name">Beige</div></div>
+                    </div>
+                    <h4 style="margin:20px 0 12px;color:var(--text-secondary)">Adjustments</h4>
+                    <div class="form-grid">
+                        <div class="form-group full-width"><label>Finish</label><select id="material-finish"><option value="matte">Matte</option><option value="satin">Satin</option><option value="semi-gloss">Semi-Gloss</option><option value="glossy">Glossy</option></select></div>
+                        <div class="form-group full-width"><label>Grain Direction</label><select id="material-grain"><option value="vertical">Vertical</option><option value="horizontal">Horizontal</option></select></div>
+                        <div class="form-group full-width"><label>Scale (%)</label><div class="slider-control"><input type="range" id="material-scale" min="50" max="200" value="100"><span class="slider-value">100%</span></div></div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="callSketchup('apply_material', getMaterialParams())">Apply to Selection</button>
+                        <button class="btn btn-secondary" onclick="callSketchup('reset_material')">Reset Material</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANIMATION TAB -->
+            <div class="tab-content" id="tab-animation">
+                <div class="panel-header"><h2>Animation Studio</h2><p class="subtitle">Create opening and closing effects</p></div>
+                <div class="panel-body">
+                    <div class="animation-section">
+                        <h4>Animation Type</h4>
+                        <div class="anim-controls">
+                            <button class="anim-btn active" onclick="selectAnimType('swing',this)">Swing</button>
+                            <button class="anim-btn" onclick="selectAnimType('slide',this)">Slide</button>
+                            <button class="anim-btn" onclick="selectAnimType('bifold',this)">Bi-Fold</button>
+                            <button class="anim-btn" onclick="selectAnimType('drawer',this)">Drawer</button>
+                        </div>
+                    </div>
+                    <div class="animation-section">
+                        <h4>Settings</h4>
+                        <div class="form-grid">
+                            <div class="form-group"><label>Duration (ms)</label><input type="number" id="anim-duration" value="1000" min="200" max="5000"></div>
+                            <div class="form-group"><label>Max Angle/Dist</label><input type="number" id="anim-max" value="90" min="10" max="360"></div>
+                            <div class="form-group"><label>Direction</label><select id="anim-direction"><option value="open">Open</option><option value="close">Close</option><option value="toggle">Toggle</option></select></div>
+                        </div>
+                    </div>
+                    <div class="animation-section">
+                        <h4>Easing</h4>
+                        <div class="anim-controls">
+                            <button class="anim-btn active" onclick="selectEasing('ease-in-out',this)">Ease In-Out</button>
+                            <button class="anim-btn" onclick="selectEasing('ease-in',this)">Ease In</button>
+                            <button class="anim-btn" onclick="selectEasing('ease-out',this)">Ease Out</button>
+                            <button class="anim-btn" onclick="selectEasing('linear',this)">Linear</button>
+                            <button class="anim-btn" onclick="selectEasing('bounce',this)">Bounce</button>
+                        </div>
+                    </div>
+                    <div class="animation-section">
+                        <h4>Speed</h4>
+                        <div class="speed-selector">
+                            <button class="speed-btn" onclick="setSpeed(0.5,this)">0.5x</button>
+                            <button class="speed-btn active" onclick="setSpeed(1,this)">1x</button>
+                            <button class="speed-btn" onclick="setSpeed(1.5,this)">1.5x</button>
+                            <button class="speed-btn" onclick="setSpeed(2,this)">2x</button>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="callSketchup('animate_selected', getAnimParams())">Animate Selected</button>
+                        <button class="btn btn-warning" onclick="callSketchup('stop_animation')">Stop</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HARDWARE TAB -->
+            <div class="tab-content" id="tab-hardware">
+                <div class="panel-header"><h2>Hardware Placement</h2><p class="subtitle">Add hinges, handles, and slides</p></div>
+                <div class="panel-body">
+                    <div class="hardware-grid">
+                        <div class="hardware-card selected" onclick="selectHardware('hinge',this)"><div class="hardware-icon">&#128279;</div><div class="hardware-name">Hinge</div></div>
+                        <div class="hardware-card" onclick="selectHardware('bar_handle',this)"><div class="hardware-icon">&#9776;</div><div class="hardware-name">Bar Handle</div></div>
+                        <div class="hardware-card" onclick="selectHardware('knob',this)"><div class="hardware-icon">&#9679;</div><div class="hardware-name">Knob</div></div>
+                        <div class="hardware-card" onclick="selectHardware('drawer_slide',this)"><div class="hardware-icon">&#8596;</div><div class="hardware-name">Drawer Slide</div></div>
+                        <div class="hardware-card" onclick="selectHardware('magnet',this)"><div class="hardware-icon">&#129522;</div><div class="hardware-name">Magnetic Catch</div></div>
+                        <div class="hardware-card" onclick="selectHardware('cam_lock',this)"><div class="hardware-icon">&#9881;</div><div class="hardware-name">Cam Lock</div></div>
+                    </div>
+                    <div class="form-grid" style="margin-top:20px">
+                        <div class="form-group"><label>Finish</label><select id="hw-finish"><option value="chrome">Chrome</option><option value="nickel">Brushed Nickel</option><option value="brass">Brass</option><option value="matte_black">Matte Black</option></select></div>
+                        <div class="form-group"><label>Quantity</label><input type="number" id="hw-qty" value="2" min="1" max="20"></div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="callSketchup('add_hardware', getHardwareParams())">Add to Selection</button>
+                        <button class="btn btn-secondary" onclick="callSketchup('auto_place_hardware')">Auto-Place All</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CUTLIST TAB -->
+            <div class="tab-content" id="tab-cutlist">
+                <div class="panel-header"><h2>Cutlist Generator</h2><p class="subtitle">Generate cutting list for all panels</p></div>
+                <div class="panel-body">
+                    <div class="button-group" style="border:none;padding-top:0;margin-bottom:16px">
+                        <button class="btn btn-primary" onclick="callSketchup('generate_cutlist')">Generate Cutlist</button>
+                        <button class="btn btn-secondary" onclick="callSketchup('export_cutlist_csv')">Export CSV</button>
+                    </div>
+                    <table class="cutlist-table">
+                        <thead><tr><th>Part</th><th>Qty</th><th>Width</th><th>Height</th><th>Thickness</th><th>Material</th></tr></thead>
+                        <tbody id="cutlist-body"><tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:40px">Click Generate to analyze model</td></tr></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- COST TAB -->
+            <div class="tab-content" id="tab-cost">
+                <div class="panel-header"><h2>Cost Calculator</h2><p class="subtitle">Estimate material and hardware costs</p></div>
+                <div class="panel-body">
+                    <div class="cost-summary">
+                        <div class="cost-card"><div class="cost-value" id="cost-material">$0.00</div><div class="cost-label">Material</div></div>
+                        <div class="cost-card"><div class="cost-value" id="cost-hardware">$0.00</div><div class="cost-label">Hardware</div></div>
+                        <div class="cost-card"><div class="cost-value" id="cost-total">$0.00</div><div class="cost-label">Total</div></div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="callSketchup('calculate_cost')">Calculate Cost</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEMPLATES TAB -->
+            <div class="tab-content" id="tab-templates">
+                <div class="panel-header"><h2>Design Templates</h2><p class="subtitle">Quick-start with pre-built designs</p></div>
+                <div class="panel-body">
+                    <div class="templates-grid">
+                        <div class="template-card" onclick="callSketchup('load_template','wardrobe_2door')"><div class="template-preview"><svg viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="50" fill="none" stroke="#c8956c" stroke-width="2"/><line x1="40" y1="5" x2="40" y2="55" stroke="#c8956c" stroke-width="1.5"/></svg></div><div class="template-name">2-Door Wardrobe</div><div class="template-desc">1200x2400mm hinged</div></div>
+                        <div class="template-card" onclick="callSketchup('load_template','wardrobe_sliding')"><div class="template-preview"><svg viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="50" fill="none" stroke="#c8956c" stroke-width="2"/><rect x="5" y="5" width="38" height="50" fill="rgba(200,149,108,0.2)"/></svg></div><div class="template-name">Sliding Wardrobe</div><div class="template-desc">Modern sliding doors</div></div>
+                        <div class="template-card" onclick="callSketchup('load_template','dresser_3draw')"><div class="template-preview"><svg viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="50" fill="none" stroke="#c8956c" stroke-width="2"/><line x1="5" y1="22" x2="75" y2="22" stroke="#c8956c"/><line x1="5" y1="38" x2="75" y2="38" stroke="#c8956c"/></svg></div><div class="template-name">3-Drawer Dresser</div><div class="template-desc">Bedroom dresser</div></div>
+                        <div class="template-card" onclick="callSketchup('load_template','bookshelf')"><div class="template-preview"><svg viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="50" fill="none" stroke="#c8956c" stroke-width="2"/><line x1="5" y1="17" x2="75" y2="17" stroke="#c8956c"/><line x1="5" y1="30" x2="75" y2="30" stroke="#c8956c"/><line x1="5" y1="43" x2="75" y2="43" stroke="#c8956c"/></svg></div><div class="template-name">Bookshelf</div><div class="template-desc">5-tier shelf</div></div>
+                        <div class="template-card" onclick="callSketchup('load_template','tv_unit')"><div class="template-preview"><svg viewBox="0 0 80 60"><rect x="5" y="15" width="70" height="40" fill="none" stroke="#c8956c" stroke-width="2"/></svg></div><div class="template-name">TV Unit</div><div class="template-desc">Entertainment center</div></div>
+                        <div class="template-card" onclick="callSketchup('load_template','kitchen_cabinet')"><div class="template-preview"><svg viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="50" fill="none" stroke="#c8956c" stroke-width="2"/><line x1="40" y1="5" x2="40" y2="55" stroke="#c8956c"/></svg></div><div class="template-name">Kitchen Cabinet</div><div class="template-desc">Base cabinet</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXPORT TAB -->
+            <div class="tab-content" id="tab-export">
+                <div class="panel-header"><h2>Export Design</h2><p class="subtitle">Export your design in various formats</p></div>
+                <div class="panel-body">
+                    <div class="export-options">
+                        <div class="export-option" onclick="callSketchup('export_skp')"><div class="export-icon" style="background:#3498db;color:white">.skp</div><div class="export-info"><h4>SketchUp</h4><p>Native format</p></div></div>
+                        <div class="export-option" onclick="callSketchup('export_dxf')"><div class="export-icon" style="background:#e74c3c;color:white">.dxf</div><div class="export-info"><h4>DXF / AutoCAD</h4><p>For CNC routing</p></div></div>
+                        <div class="export-option" onclick="callSketchup('export_stl')"><div class="export-icon" style="background:#2ecc71;color:white">.stl</div><div class="export-info"><h4>STL / 3D Print</h4><p>For 3D printing</p></div></div>
+                        <div class="export-option" onclick="callSketchup('export_obj')"><div class="export-icon" style="background:#9b59b6;color:white">.obj</div><div class="export-info"><h4>OBJ</h4><p>For rendering</p></div></div>
+                        <div class="export-option" onclick="callSketchup('export_image')"><div class="export-icon" style="background:#1abc9c;color:white">PNG</div><div class="export-info"><h4>Image</h4><p>Screenshot export</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

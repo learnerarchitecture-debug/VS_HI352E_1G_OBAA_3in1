@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OBAA Launcher</string>
+    <string name="brand">OBAA Electronics</string>
+    <string name="pill">LAUNCHER · V1.1</string>
+    <string name="live_tv">Live TV</string>
+    <string name="live_tv_sub">resumed from last input</string>
+    <string name="watch_now">Watch now ▶</string>
+    <string name="your_apps">Your apps</string>
+    <string name="quick_access">Quick access</string>
+    <string name="all_apps">All apps</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_auto_update">Auto update</string>
+    <string name="settings_auto_update_summary">Check for updates automatically</string>
+    <string name="settings_beta">Include pre-releases</string>
+    <string name="settings_repo">Repository (owner/name)</string>
+    <string name="settings_repo_summary">Default: OBAA-Electronics/obaa-launcher</string>
+    <string name="settings_check_now">Check for updates now</string>
+    <string name="settings_status">Status</string>
+    <string name="settings_last_checked">Last checked</string>
+    <string name="settings_note">Updates download in the background and install silently — no dialogs appear.</string>
+    <string name="dialog_repo_title">Repository (owner/name)</string>
+    <string name="dialog_repo_hint">e.g. OBAA-Electronics/obaa-launcher</string>
+    <string name="dialog_repo_save">Save</string>
+    <string name="dialog_repo_cancel">Cancel</string>
+    <string name="status_checking">Checking for updates…</string>
+    <string name="status_uptodate">Up to date - v%s</string>
+    <string name="status_not_found">No releases found</string>
+    <string name="status_update_available">Update available: v%s</string>
+    <string name="status_check_failed">Check failed: %s</string>
+    <string name="dialog_update_title">Update available - v%s</string>
+    <string name="dialog_update_notes">%s</string>
+    <string name="dialog_update_install">Install</string>
+    <string name="dialog_update_later">Later</string>
+    <string name="status_downloading">Downloading v%s…</string>
+    <string name="status_installing">Installing v%s…</string>
+    <string name="status_install_failed">Install failed: %s</string>
+    <string name="hint_bar">← → navigate     ●  OK open     Back return</string>
+</resources>

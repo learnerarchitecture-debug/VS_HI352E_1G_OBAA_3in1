@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ObaaTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@drawable/app_bg</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="HeroTitle">
+        <item name="android:textColor">@color/txt</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="RowLabel">
+        <item name="android:textColor">@color/txt</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

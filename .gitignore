@@ -1,0 +1,16 @@
+# Large binary files (download separately)
+tools/dl/*.zip
+tools/x-jdk8/jdk8u504-b01/jre/lib/rt.jar
+
+# Build outputs
+obaa-launcher/build/
+*.apk
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

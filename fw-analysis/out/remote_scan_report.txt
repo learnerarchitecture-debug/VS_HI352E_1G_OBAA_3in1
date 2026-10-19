@@ -1,0 +1,69 @@
+2-byte complement pairs (b[i+1] == ~b[i]): total 15433 (random baseline ~16384)
+top 4KB blocks by pair density:
+  0x25b000  32 pairs (0.78% of bytes)
+  0x10000  30 pairs (0.73% of bytes)
+  0x62000  28 pairs (0.68% of bytes)
+  0x3b9000  28 pairs (0.68% of bytes)
+  0x3f000  27 pairs (0.66% of bytes)
+  0x278000  27 pairs (0.66% of bytes)
+  0x2d4000  27 pairs (0.66% of bytes)
+  0x357000  27 pairs (0.66% of bytes)
+  0x392000  27 pairs (0.66% of bytes)
+  0x77000  26 pairs (0.63% of bytes)
+  0x12c000  26 pairs (0.63% of bytes)
+  0x2a0000  26 pairs (0.63% of bytes)
+  0x391000  26 pairs (0.63% of bytes)
+  0x4000  25 pairs (0.61% of bytes)
+  0x18c000  25 pairs (0.61% of bytes)
+  0x1c5000  25 pairs (0.61% of bytes)
+  0x1f8000  25 pairs (0.61% of bytes)
+  0x260000  25 pairs (0.61% of bytes)
+  0x26b000  25 pairs (0.61% of bytes)
+  0x2ec000  25 pairs (0.61% of bytes)
+  0x321000  25 pairs (0.61% of bytes)
+  0x34b000  25 pairs (0.61% of bytes)
+  0x38c000  25 pairs (0.61% of bytes)
+  0x39a000  25 pairs (0.61% of bytes)
+
+4-byte NEC-style records (aa ~aa cc ~cc): 53 (random baseline ~64)
+clusters (gap<=128B), top 40:
+  0x1005e-0x1005e  n=1  e.g. 738c639c
+  0x12f36-0x12f36  n=1  e.g. b04fd728
+  0x1bcc4-0x1bcc4  n=1  e.g. 0cf3857a
+  0x1d882-0x1d882  n=1  e.g. 609f33cc
+  0x31a7c-0x31a7c  n=1  e.g. 6897ad52
+  0x65baf-0x65baf  n=1  e.g. 8a75de21
+  0x7bab3-0x7bab3  n=1  e.g. e11e847b
+  0x961d4-0x961d4  n=1  e.g. 5ca31ce3
+  0x9efcb-0x9efcb  n=1  e.g. 7e8118e7
+  0xaa70a-0xaa70a  n=1  e.g. 35caa659
+  0xb5117-0xb5117  n=1  e.g. c03f8b74
+  0xc4cfb-0xc4cfb  n=1  e.g. 9b6442bd
+  0xc56eb-0xc56eb  n=1  e.g. 25daa758
+  0xc5a71-0xc5a71  n=1  e.g. c33ce11e
+  0xcab3d-0xcab3d  n=1  e.g. ee11d52a
+  0xce749-0xce749  n=1  e.g. 48b77d82
+  0xd216e-0xd216e  n=1  e.g. db24ff00
+  0xf9f36-0xf9f36  n=1  e.g. fe0151ae
+  0x103683-0x103683  n=1  e.g. a35c9e61
+  0x106c20-0x106c20  n=1  e.g. 9a65bb44
+  0x11b452-0x11b452  n=1  e.g. 41be02fd
+  0x12fdee-0x12fdee  n=1  e.g. 1ae503fc
+  0x13465e-0x13465e  n=1  e.g. 28d7e619
+  0x138509-0x138509  n=1  e.g. 47b833cc
+  0x13afbd-0x13afbd  n=1  e.g. 1ce3d728
+  0x13ba1d-0x13ba1d  n=1  e.g. c83747b8
+  0x14b931-0x14b931  n=1  e.g. 06f9f40b
+  0x14c2b0-0x14c2b0  n=1  e.g. 0af5847b
+  0x17406a-0x17406a  n=1  e.g. e01fba45
+  0x18dcd3-0x18dcd3  n=1  e.g. 9e618877
+  0x1a6a53-0x1a6a53  n=1  e.g. a758ad52
+  0x1ae1a3-0x1ae1a3  n=1  e.g. 06f907f8
+  0x1b0afc-0x1b0afc  n=1  e.g. 5ea15ca3
+  0x1b263e-0x1b263e  n=1  e.g. 6f904ab5
+  0x21774e-0x21774e  n=1  e.g. 2ad58c73
+  0x225e99-0x225e99  n=1  e.g. 619e57a8
+  0x269dc5-0x269dc5  n=1  e.g. 956a7788
+  0x277eb4-0x277eb4  n=1  e.g. 4db22dd2
+  0x29d3ee-0x29d3ee  n=1  e.g. 44bb837c
+  0x29e41d-0x29e41d  n=1  e.g. 06f9f50a

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w16="http://schemas.microsoft.com/office/word/2018/wordml" xmlns:w16cex="http://schemas.microsoft.com/office/word/2018/wordml/cex" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid" xmlns:w16sdtdh="http://schemas.microsoft.com/office/word/2020/wordml/sdtdh" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:st1="urn:schemas-microsoft-com:office:smarttags" xmlns:sl="http://schemas.openxmlformats.org/schemaLibrary/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word">
+  <w:body>
+    <w:p w:rsidR="005F1234" w:rsidRDefault="005F1234" w:rsidP="005F1234">
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="240" w:after="120"/>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="56"/>
+          <w:color w:val="1F4E79"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="56"/>
+          <w:color w:val="1F4E79"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+        <w:t>BHIKAJI CAMA PALACE</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="005F1234" w:rsidRDefault="005F1234" w:rsidP="005F1234">
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="0" w:after="60"/>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="48"/>
+          <w:color w:val="1F4E79"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="48"/>
+          <w:color w:val="1F4E79"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+        <w:t>BUILDING NORMS & REGULATIONS</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="005F1234" w:rsidRDefault="005F1234" w:rsidP="005F1234">
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="0" w:after="60"/>
+        <w:rPr>
+          <w:sz w:val="28"/>
+          <w:color w:val="4472C4"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="28"/>
+          <w:color w:val="4472C4"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+        <w:t>Comprehensive Compliance Report</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="005F1234" w:rsidRDefault="005F1234" w:rsidP="005F1234">
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="0" w:after="60"/>
+        <w:rPr>
+          <w:sz w:val="24"/>
+          <w:color w:val="4472C4"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="24"/>
+          <w:color w:val="4472C4"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+        <w:t>Based on MPD 2041/2047 Draft, UBBL 2016 & Local Delhi Norms</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="005F1234" w:rsidRDefault="005F1234" w:rsidP="005F1234">
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="240" w:after="120"/>
+        <w:rPr>
+          <w:sz w:val="22"/>
+          <w:color w:val="2E75B6"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="22"/>
+          <w:color w:val="2E75B6"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+        <w:t>Location: Bhikaji Cama Place, New Delhi - 110066</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="005F1234" w:rsidRDefault="005F1234" w:rsidP="005F1234">
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="0" w:after="60"/>
+        <w:rPr>
+          <w:sz w:val="22"/>
+          <w:color w:val="2E75B6"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="22"/>
+          <w:color w:val="2E75B6"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+        <w:t>Zone: South Delhi / Commercial District Centre</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="005F1234" w:rsidRDefault="005F1234" w:rsidP="005F1234">
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="0" w:after="60"/>
+        <w:rPr>
+          <w:sz w:val="22"/>
+          <w:color w:val="2E75B6"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="22"/>
+          <w:color w:val="2E75B6"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+        <w:t>Document Version: 1.0 | Date: September 2026</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="005F1234" w:rsidRDefault="005F1234" w:rsidP="005F1234">
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="360" w:after="60"/>
+        <w:rPr>
+          <w:sz w:val="20"/>
+          <w:color w:val="595959"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="20"/>
+          <w:color w:val="595959"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+        <w:t>Prepared for: Architectural & Planning Compliance</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="005F1234" w:rsidRDefault="005F1234" w:rsidP="005F1234">
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:rPr>
+          <w:sz w:val="20"/>
+          <w:color w:val="595959"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="20"/>
+          <w:color w:val="595959"/>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        </w:rPr>
+        <w:t>Reference Standards: MPD 2041/2047, UBBL 2016, NBC 2016, DDA Regulations</w:t>
+      </w:r>
+    </w:p>
+  </w:body>
+</w:document>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OBAA Launcher — Modern UI concept (v1.1)</title>
+<style>
+:root{
+  --card:rgba(255,255,255,.055); --cb:rgba(255,255,255,.09);
+  --txt:#F2F5FA; --mut:#98A2B3; --a1:#4F7CFF; --a2:#9B5CFF; --ok:#3DDC97;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#020308;color:var(--txt);font-family:"Segoe UI Variable Display","Segoe UI",system-ui,Roboto,Arial,sans-serif;padding:40px 0 80px}
+.wrap{width:1152px;margin:0 auto}
+h1.pg{font-size:30px;font-weight:700;letter-spacing:.3px}
+.sub{color:var(--mut);margin-top:10px;font-size:15px;line-height:1.55}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:10px 30px;margin:24px 0 6px;padding:24px 28px;border:1px solid var(--cb);border-radius:18px;background:rgba(255,255,255,.03);font-size:14px;color:#C7CFDB;line-height:1.5}
+.notes b{color:#fff}
+.swatches{display:flex;gap:10px;margin:18px 0 0}
+.sw{width:58px;height:36px;border-radius:9px;border:1px solid rgba(255,255,255,.14)}
+.hintline{color:#7E8798;font-size:13px;margin:18px 0 30px}
+.sect{font-size:22px;font-weight:700;margin:44px 0 16px;letter-spacing:.2px}
+.sect small{color:var(--mut);font-weight:400;font-size:14px;margin-left:10px}
+.frame{position:relative;width:1152px;height:648px;overflow:hidden;border-radius:20px;border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 80px rgba(0,0,0,.55);margin-bottom:12px}
+.screen{position:absolute;top:0;left:0;width:1920px;height:1080px;transform:scale(.6);transform-origin:top left;overflow:hidden;
+ background:
+  radial-gradient(1100px 520px at 12% -6%,rgba(79,124,255,.22),transparent 60%),
+  radial-gradient(900px 500px at 92% 8%,rgba(155,92,255,.18),transparent 60%),
+  radial-gradient(800px 420px at 60% 112%,rgba(6,182,212,.10),transparent 60%),
+  linear-gradient(160deg,#0A0D13 0%,#0D1220 55%,#0A0E17 100%);
+}
+.cap{color:var(--mut);font-size:13px;margin:0 0 34px 4px}
+.cap b{color:#DCE3EE}
+
+/* ---------- shared ---------- */
+.tb{display:flex;justify-content:space-between;align-items:center;padding:42px 64px 0}
+.brand{display:flex;align-items:center;gap:16px}
+.logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--a1),var(--a2));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:25px;box-shadow:0 10px 30px rgba(79,124,255,.35)}
+.word{font-size:31px;font-weight:800;letter-spacing:3px;background:linear-gradient(135deg,#fff,#B9C6FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pill{font-size:15px;color:#AFB9C9;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);border-radius:999px;padding:7px 16px;letter-spacing:.6px}
+.st{display:flex;align-items:center;gap:24px;color:#C9D1DE}
+.st svg{opacity:.85}
+.st .sep{width:1px;height:30px;background:rgba(255,255,255,.16)}
+.clock{font-size:28px;font-weight:700;letter-spacing:.5px}
+
+.tile{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+ border-radius:26px;background:var(--card);border:1px solid var(--cb);
+ transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;cursor:pointer}
+.tile:hover,.tile.focused{border:3px solid rgba(255,255,255,.92);transform:scale(1.06);background:rgba(255,255,255,.10);box-shadow:0 18px 60px rgba(79,124,255,.38)}
+.tile .ic{width:92px;height:92px;border-radius:24px;display:flex;align-items:center;justify-content:center;font-size:42px;font-weight:800;color:#fff}
+.tile .nm{font-size:20px;color:var(--mut);letter-spacing:.2px}
+.tile:hover .nm,.tile.focused .nm{color:#fff}
+.g-yt{background:linear-gradient(140deg,#FF3D3D,#B70000)}
+.g-nf{background:linear-gradient(140deg,#E50914,#6E0707)}
+.g-pv{background:linear-gradient(140deg,#12B8E8,#00587A)}
+.g-hs{background:linear-gradient(140deg,#2E8BF7,#0B2A6F)}
+.g-ytv{background:linear-gradient(140deg,#FF5A5A,#8E1C1C)}
+.g-as{background:linear-gradient(140deg,#9B5CFF,#4F7CFF)}
+.g-tv{background:linear-gradient(140deg,#22C1A3,#0B6E5B)}
+.g-hd{background:linear-gradient(140deg,#8A93A5,#3C4353)}
+.g-sys{background:linear-gradient(140deg,#6C7BFF,#2B3FF0)}
+.g-soft{background:linear-gradient(140deg,#5B6474,#333A48)}
+
+.rowlabel{margin:38px 64px 0;font-size:26px;font-weight:650;letter-spacing:.2px}
+.rowlabel small{color:var(--mut);font-size:17px;font-weight:400;margin-left:14px}
+.row{display:flex;gap:26px;margin:22px 64px 0}
+.k{display:inline-block;padding:3px 13px;border:1px solid rgba(255,255,255,.18);border-radius:9px;background:rgba(255,255,255,.05);font-size:16px;color:#C9D1DE;margin:0 7px}
+.hint{position:absolute;bottom:28px;left:0;right:0;text-align:center;color:#8B94A6;font-size:19px}
+
+/* ---------- home ---------- */
+.hero{position:relative;margin:28px 64px 0;height:318px;border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.10);
+ background:
+  radial-gradient(720px 320px at 84% 16%,rgba(79,124,255,.38),transparent 65%),
+  radial-gradient(520px 280px at 68% 108%,rgba(155,92,255,.32),transparent 62%),
+  linear-gradient(115deg,rgba(255,255,255,.085),rgba(255,255,255,.02) 55%),#10141F}
+.hero .waves{position:absolute;inset:0;opacity:.5}
+.hero .lc{position:absolute;left:54px;top:44px}
+.ol{font-size:16px;letter-spacing:5px;color:#9FB4FF;font-weight:600}
+.hero h2{font-size:56px;font-weight:750;margin-top:12px;letter-spacing:.3px}
+.hero .hs{font-size:22px;color:#AEB8C9;margin-top:10px}
+.chips{display:flex;gap:14px;margin-top:28px}
+.chip{display:flex;align-items:center;gap:11px;padding:8px 18px 8px 8px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:18px;color:#D5DCE8}
+.chip i{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:15px;font-weight:700;color:#fff}
+.watch{position:absolute;right:60px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:26px}
+.orb{width:98px;height:98px;border-radius:50%;background:linear-gradient(135deg,var(--a1),var(--a2));display:flex;align-items:center;justify-content:center;box-shadow:0 22px 60px rgba(79,124,255,.45)}
+.btn{border-radius:999px;padding:18px 36px;font-size:23px;font-weight:650;letter-spacing:.2px}
+.btn.glass{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff}
+.btn.pri{background:linear-gradient(135deg,var(--a1),var(--a2));border:none;color:#fff;box-shadow:0 16px 44px rgba(79,124,255,.42)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.16);color:#E6EBF4}
+.btn.focused{outline:3px solid rgba(255,255,255,.95);outline-offset:3px;box-shadow:0 18px 60px rgba(79,124,255,.45)}
+
+/* ---------- all apps ---------- */
+.titlebar{display:flex;justify-content:space-between;align-items:center;padding:40px 64px 0}
+h2.big{font-size:40px;font-weight:750}
+.search{display:flex;align-items:center;gap:14px;width:430px;padding:15px 22px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--cb);color:var(--mut);font-size:20px}
+.grid{display:grid;grid-template-columns:repeat(7,200px);grid-auto-rows:200px;gap:26px;margin:36px 64px 0}
+.grid .tile{width:auto;height:auto}
+
+/* ---------- settings ---------- */
+.setwrap{display:flex;gap:52px;padding:40px 64px 0}
+.nav{width:430px;display:flex;flex-direction:column;gap:10px}
+.nav .it{padding:19px 26px;border-radius:16px;font-size:24px;color:#B8C1D0;display:flex;align-items:center;gap:18px}
+.nav .it.on{background:linear-gradient(135deg,rgba(79,124,255,.24),rgba(155,92,255,.20));border:1px solid rgba(140,160,255,.45);color:#fff;font-weight:650}
+.panel{flex:1;display:flex;flex-direction:column;gap:22px}
+.card{background:rgba(255,255,255,.045);border:1px solid var(--cb);border-radius:22px;padding:26px 30px}
+.card h3{font-size:26px;font-weight:700;margin-bottom:6px}
+.card .desc{color:var(--mut);font-size:17px;margin-bottom:16px}
+.kv{display:flex;justify-content:space-between;align-items:center;padding:13px 0;font-size:21px;color:#D7DEE9}
+.kv+.kv{border-top:1px solid rgba(255,255,255,.07)}
+.kv span{color:var(--mut)}
+.okrow{color:var(--ok);font-weight:650}
+.sw{width:64px;height:36px;border-radius:99px;background:#39404E;position:relative;transition:.2s}
+.sw.on{background:linear-gradient(135deg,var(--a1),var(--a2))}
+.sw::after{content:"";position:absolute;top:4px;left:4px;width:28px;height:28px;border-radius:50%;background:#fff;transition:.2s}
+.sw.on::after{left:32px}
+.kv .sw{margin-left:20px}
+.small{color:#7E8798;font-size:15px;margin-top:12px;line-height:1.5}
+
+/* ---------- dialog ---------- */
+.dim{position:absolute;inset:0;background:rgba(4,6,10,.72);backdrop-filter:blur(7px)}
+.modal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:950px;background:#12161F;border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:46px 50px;box-shadow:0 50px 140px rgba(0,0,0,.7)}
+.mh{display:flex;align-items:center;gap:26px}
+.mico{width:86px;height:86px;border-radius:26px;background:linear-gradient(135deg,var(--a1),var(--a2));display:flex;align-items:center;justify-content:center;box-shadow:0 16px 50px rgba(79,124,255,.45)}
+.mh h2{font-size:38px;font-weight:750}
+.mh .ms{color:var(--mut);font-size:20px;margin-top:6px}
+.bul{margin:30px 0 8px 6px;color:#CBD3DF;font-size:21px;line-height:1.75;list-style:none}
+.bul li::before{content:"•";color:#8FA6FF;margin-right:16px}
+.mfoot{display:flex;justify-content:flex-end;gap:18px;margin-top:34px}
+.mnote{margin-top:22px;color:#7E8798;font-size:16px}
+
+/* ---------- boot ---------- */
+.bootstrapc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;background:#000}
+.bootlogo{width:170px;height:170px;border-radius:50%;background:conic-gradient(from 210deg,var(--a1),var(--a2),#38E1FF,var(--a1));display:flex;align-items:center;justify-content:center}
+.bootlogo .in{width:150px;height:150px;border-radius:50%;background:#000;display:flex;align-items:center;justify-content:center;font-size:74px;font-weight:800;background:linear-gradient(135deg,#fff,#B9C6FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bootword{font-size:66px;font-weight:800;letter-spacing:6px;background:linear-gradient(135deg,#fff,#B9C6FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bootline{width:420px;height:2px;background:linear-gradient(90deg,transparent,rgba(140,160,255,.85),transparent)}
+.pba{display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:8px}
+.pba .txt{font-size:30px;letter-spacing:9px;color:#E8ECF4;font-weight:500}
+.bootver{color:#5A6375;font-size:20px;letter-spacing:3px;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="pg">OBAA Launcher — Modern UI concept · <span style="color:#8FA6FF">v1.1</span></h1>
+  <div class="sub">Dark glass design · D-pad-first TV navigation · built for the SP352 / Hi3751V352E board (Android 9, 1 GB RAM, 720p UI).<br>
+  Hover any tile to feel the focus effect. Screens shown at 1920×1080 (device scales to 1280×720).</div>
+
+  <div class="notes">
+    <div><b>Branding:</b> “OBAA Launcher — powered by android — V1.1” on Home, About, and boot splash.</div>
+    <div><b>Auto-update:</b> Settings → Software update, checks a public GitHub repo (Releases API), silent install as system app.</div>
+    <div><b>Focus model:</b> big scale + white ring + soft blue glow — everything reachable with the 8890 remote.</div>
+    <div><b>Lightweight:</b> static gradient art, no live blur on device, cached app icons (1 GB RAM safe).</div>
+    <div><b>Inputs row:</b> Live TV · HDMI · Media · Settings — one press away.</div>
+    <div><b>Motion:</b> rows fade at edges, 180 ms scale/glow, no heavy animation.</div>
+  </div>
+  <div class="swatches">
+    <div class="sw" style="background:#4F7CFF"></div>
+    <div class="sw" style="background:#9B5CFF"></div>
+    <div class="sw" style="background:#0D1220"></div>
+    <div class="sw" style="background:#3DDC97"></div>
+    <div class="sw" style="background:#F2F5FA"></div>
+  </div>
+  <div class="hintline">Palette — accent blue, accent violet, deep background, success green, text white. Focus ring is always plain white for maximum contrast on TV panels.</div>
+
+  <!-- ============ 01 HOME ============ -->
+  <div class="sect">01 — Home <small>hero tile + app rows, one item focused (focus = white ring + glow + scale)</small></div>
+  <div class="frame"><div class="screen">
+    <div class="tb">
+      <div class="brand">
+        <div class="logo">O</div>
+        <div class="word">OBAA</div>
+        <div class="pill">LAUNCHER · V1.1</div>
+      </div>
+      <div class="st">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9D1DE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a11 11 0 0 1 14 0"/><path d="M8.5 15.5a6 6 0 0 1 7 0"/><circle cx="12" cy="18.7" r="1.4" fill="#C9D1DE" stroke="none"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9D1DE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10-5 4V3l5 4L7 17"/></svg>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9D1DE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18h18"/><path d="M8 10V7a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"/></svg>
+        <div class="sep"></div>
+        <div class="clock">21:36</div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <svg class="waves" viewBox="0 0 1920 318" preserveAspectRatio="none">
+        <path d="M1100 318 C 1260 180, 1450 260, 1620 140 C 1720 70, 1820 110, 1920 40" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="2"/>
+        <path d="M1180 318 C 1330 210, 1520 280, 1700 170 C 1790 115, 1870 150, 1920 100" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="2"/>
+        <path d="M980 318 C 1150 190, 1370 250, 1560 120 C 1680 40, 1800 90, 1920 0" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="2"/>
+      </svg>
+      <div class="lc">
+        <div class="ol">LIVE TV · DTV</div>
+        <h2>Live TV</h2>
+        <div class="hs">8 channels saved · resumed from last input</div>
+        <div class="chips">
+          <div class="chip"><i class="g-hs">S</i>Star Plus</div>
+          <div class="chip"><i class="g-yt">Z</i>Zee TV</div>
+          <div class="chip"><i class="g-tv">N</i>News</div>
+          <div class="chip"><i class="g-pv">SP</i>Sports</div>
+        </div>
+      </div>
+      <div class="watch">
+        <div class="orb">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="btn glass">Watch now</div>
+      </div>
+    </div>
+
+    <div class="rowlabel">Your apps <small>most used first</small></div>
+    <div class="row">
+      <div class="tile"><div class="ic g-yt">▶</div><div class="nm">YouTube</div></div>
+      <div class="tile focused"><div class="ic g-nf">N</div><div class="nm">Netflix</div></div>
+      <div class="tile"><div class="ic g-pv">P</div><div class="nm">Prime Video</div></div>
+      <div class="tile"><div class="ic g-hs">H</div><div class="nm">Hotstar</div></div>
+      <div class="tile"><div class="ic g-ytv">TV</div><div class="nm">YouTube TV</div></div>
+      <div class="tile"><div class="ic g-as">↓</div><div class="nm">App Store</div></div>
+    </div>
+
+    <div class="rowlabel">Inputs &amp; tools</div>
+    <div class="row">
+      <div class="tile" style="width:168px;height:168px"><div class="ic g-tv" style="width:66px;height:66px;border-radius:18px;font-size:30px">▣</div><div class="nm" style="font-size:18px">Live TV</div></div>
+      <div class="tile" style="width:168px;height:168px"><div class="ic g-hd" style="width:66px;height:66px;border-radius:18px;font-size:26px">HD1</div><div class="nm" style="font-size:18px">HDMI 1</div></div>
+      <div class="tile" style="width:168px;height:168px"><div class="ic g-hd" style="width:66px;height:66px;border-radius:18px;font-size:26px">HD2</div><div class="nm" style="font-size:18px">HDMI 2</div></div>
+      <div class="tile" style="width:168px;height:168px"><div class="ic g-sys" style="width:66px;height:66px;border-radius:18px;font-size:30px">⚙</div><div class="nm" style="font-size:18px">Settings</div></div>
+      <div class="tile" style="width:168px;height:168px"><div class="ic g-soft" style="width:66px;height:66px;border-radius:18px;font-size:30px">⌕</div><div class="nm" style="font-size:18px">Search</div></div>
+    </div>
+
+    <div class="hint"><span class="k">← →</span> navigate <span class="k">OK</span> open <span class="k">Back</span> return</div>
+  </div></div>
+  <div class="cap"><b>Home screen</b> — clock returns top-right, OBAA brand top-left, Live TV hero, two rows, focus demo on Netflix.</div>
+
+  <!-- ============ 02 ALL APPS ============ -->
+  <div class="sect">02 — All apps <small>full grid + search pill (focus demo on Live TV)</small></div>
+  <div class="frame"><div class="screen">
+    <div class="titlebar">
+      <h2 class="big">All apps</h2>
+      <div class="search">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#98A2B3" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        Search apps
+      </div>
+    </div>
+    <div class="grid">
+      <div class="tile"><div class="ic g-yt">▶</div><div class="nm">YouTube</div></div>
+      <div class="tile"><div class="ic g-ytv">TV</div><div class="nm">YouTube TV</div></div>
+      <div class="tile"><div class="ic g-nf">N</div><div class="nm">Netflix</div></div>
+      <div class="tile"><div class="ic g-pv">P</div><div class="nm">Prime Video</div></div>
+      <div class="tile"><div class="ic g-hs">H</div><div class="nm">Hotstar</div></div>
+      <div class="tile"><div class="ic g-yt" style="background:linear-gradient(140deg,#F7B733,#B8720B)">SL</div><div class="nm">SonyLIV</div></div>
+      <div class="tile"><div class="ic g-as">Z</div><div class="nm">ZEE5</div></div>
+
+      <div class="tile focused"><div class="ic g-tv">▣</div><div class="nm">Live TV</div></div>
+      <div class="tile"><div class="ic g-hd">HD1</div><div class="nm">HDMI 1</div></div>
+      <div class="tile"><div class="ic g-hd">HD2</div><div class="nm">HDMI 2</div></div>
+      <div class="tile"><div class="ic g-hd">HD3</div><div class="nm">HDMI 3</div></div>
+      <div class="tile"><div class="ic g-soft">♪</div><div class="nm">Music</div></div>
+      <div class="tile"><div class="ic g-pv">▤</div><div class="nm">Media</div></div>
+      <div class="tile"><div class="ic g-hs">▦</div><div class="nm">Gallery</div></div>
+
+      <div class="tile"><div class="ic g-as">↓</div><div class="nm">App Store</div></div>
+      <div class="tile"><div class="ic g-soft">◎</div><div class="nm">Browser</div></div>
+      <div class="tile"><div class="ic g-soft">▩</div><div class="nm">Files</div></div>
+      <div class="tile"><div class="ic g-sys">⇄</div><div class="nm">Miracast</div></div>
+      <div class="tile"><div class="ic g-soft">◉</div><div class="nm">Remote</div></div>
+      <div class="tile"><div class="ic g-sys">⚙</div><div class="nm">Settings</div></div>
+      <div class="tile"><div class="ic g-soft">⌕</div><div class="nm">Search</div></div>
+    </div>
+    <div class="hint"><span class="k">← → ↑ ↓</span> move <span class="k">OK</span> open <span class="k">Back</span> home</div>
+  </div></div>
+  <div class="cap"><b>All apps</b> — 7×3 grid, categories kept simple; search pill ready for voice/remote search later.</div>
+
+  <!-- ============ 03 SETTINGS ============ -->
+  <div class="sect">03 — Settings · Software update <small>GitHub auto-update lives here (focus demo on “Check for updates now”)</small></div>
+  <div class="frame"><div class="screen">
+    <div class="titlebar"><h2 class="big">Settings</h2><div class="pill">OBAA Launcher · V1.1</div></div>
+    <div class="setwrap">
+      <div class="nav">
+        <div class="it">ⓘ About</div>
+        <div class="it">⌂ Network &amp; Internet</div>
+        <div class="it">▤ Display &amp; Sound</div>
+        <div class="it">▩ Apps &amp; Inputs</div>
+        <div class="it">◉ Remote &amp; Accessories</div>
+        <div class="it on">⇩ Software update</div>
+        <div class="it">⚙ System &amp; Reset</div>
+      </div>
+      <div class="panel">
+        <div class="card">
+          <h3>OBAA Launcher</h3>
+          <div class="desc">powered by android</div>
+          <div class="kv"><span>Installed version</span><div>1.1 <span style="color:#7E8798">(build 11)</span></div></div>
+          <div class="kv"><span>Update channel</span><div>Stable · main</div></div>
+        </div>
+        <div class="card">
+          <h3>Auto-update from GitHub</h3>
+          <div class="desc">Checks a public repository for new releases and installs them in the background.</div>
+          <div class="kv"><span>Auto-update</span><div class="sw on"></div></div>
+          <div class="kv"><span>Repository</span><div style="color:#9FB4FF">github.com/obaa-tv/obaa-launcher</div></div>
+          <div class="kv"><span>Include pre-releases (beta)</span><div class="sw"></div></div>
+          <div class="kv" style="padding-top:20px">
+            <span>Status</span>
+            <div class="okrow">Up to date — v1.1 is the latest ✓</div>
+          </div>
+          <div class="kv" style="padding-bottom:2px">
+            <span>Last checked</span><div>today, 21:30</div>
+          </div>
+          <div style="margin-top:18px"><div class="btn pri focused" style="display:inline-block">Check for updates now</div></div>
+          <div class="small">Updates download silently and install as a system app — no dialogs, the TV stays on the same release until a new tag appears in the repo.</div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  <div class="cap"><b>Settings → Software update</b> — version, GitHub repo, auto-update toggle, beta channel, manual check.</div>
+
+  <!-- ============ 04 UPDATE DIALOG ============ -->
+  <div class="sect">04 — Update available <small>shown only for manual check / first auto-update (silent installs later)</small></div>
+  <div class="frame"><div class="screen">
+    <div class="tb" style="opacity:.4">
+      <div class="brand"><div class="logo">O</div><div class="word">OBAA</div></div>
+      <div class="st"><div class="clock">21:36</div></div>
+    </div>
+    <div class="rowlabel" style="opacity:.35">Your apps</div>
+    <div class="row" style="opacity:.35">
+      <div class="tile"><div class="ic g-yt">▶</div><div class="nm">YouTube</div></div>
+      <div class="tile"><div class="ic g-nf">N</div><div class="nm">Netflix</div></div>
+      <div class="tile"><div class="ic g-pv">P</div><div class="nm">Prime Video</div></div>
+      <div class="tile"><div class="ic g-hs">H</div><div class="nm">Hotstar</div></div>
+    </div>
+    <div class="dim"></div>
+    <div class="modal">
+      <div class="mh">
+        <div class="mico"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg></div>
+        <div>
+          <h2>Update available</h2>
+          <div class="ms">OBAA Launcher 1.2 · 42 MB · GitHub stable</div>
+        </div>
+      </div>
+      <ul class="bul">
+        <li>New compact grid layout option for small panels</li>
+        <li>Faster row scrolling on 1 GB devices</li>
+        <li>Fixed remote focus jumping on Home after Live TV</li>
+      </ul>
+      <div class="mfoot">
+        <div class="btn ghost">Later</div>
+        <div class="btn pri focused">Install now</div>
+      </div>
+      <div class="mnote">After this update, releases install silently in the background (auto-update is ON).</div>
+    </div>
+  </div></div>
+  <div class="cap"><b>Update dialog</b> — changelog from the GitHub release notes; one press to install.</div>
+
+  <!-- ============ 05 BOOT ============ -->
+  <div class="sect">05 — Boot splash <small>replaces the bootsplash inside bootanimation.zip (/atv/bootvideo)</small></div>
+  <div class="frame"><div class="screen" style="background:#000">
+    <div class="bootstrapc">
+      <div class="bootlogo"><div class="in">O</div></div>
+      <div class="bootword">OBAA LAUNCHER</div>
+      <div class="bootline"></div>
+      <div class="pba">
+        <svg width="40" height="26" viewBox="0 0 40 26" fill="#3DDC84"><circle cx="9" cy="5" r="2.2"/><rect x="3" y="10" width="34" height="13" rx="6.5"/><circle cx="14" cy="16.5" r="2" fill="#000"/><circle cx="26" cy="16.5" r="2" fill="#000"/><path d="M7 2l4 4" stroke="#3DDC84" stroke-width="2" fill="none"/><path d="M33 2l-4 4" stroke="#3DDC84" stroke-width="2" fill="none"/></svg>
+        <div class="txt">powered by android</div>
+      </div>
+      <div class="bootver">V1.1</div>
+    </div>
+  </div></div>
+  <div class="cap"><b>Boot splash</b> — dark, clean, matches the Home look; “powered by android” kept per branding requirement.</div>
+
+  <div class="sub" style="margin-top:26px">
+    Next steps after you approve the look: I build the real APK (same design), bake it into <b>system.img</b> as the default Home,
+    wire the GitHub auto-update (Releases API + silent install), and repack the flashable <b>VS_HI352E_1G.bin</b>.
+  </div>
+</div>
+</body>
+</html>

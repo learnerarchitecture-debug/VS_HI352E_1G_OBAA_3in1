@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shallow Foundations — Figures, Sections &amp; Bar Details</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; margin: 20px auto; max-width: 1100px; padding: 0 16px; color: #222; background: #fafafa; }
+  h1 { border-bottom: 3px solid #1a5276; padding-bottom: 8px; }
+  h2 { color: #1a5276; margin-top: 36px; border-left: 5px solid #1a5276; padding-left: 10px; }
+  h3 { color: #1a5276; margin: 8px 0 4px; font-size: 15px; }
+  .fig { background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 14px; margin: 14px 0; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 800px) { .grid2 { grid-template-columns: 1fr; } }
+  .fig svg { width: 100%; height: auto; display: block; }
+  .dim { font-size: 12px; fill: #c0392b; font-weight: bold; }
+  .lbl { font-size: 13px; fill: #1a5276; font-weight: bold; }
+  .lblw { font-size: 12.5px; fill: #333; }
+  .bar { font-size: 12.5px; fill: #7b241c; font-weight: bold; }
+  .sub { font-size: 11.5px; fill: #555; font-style: italic; }
+  .capt { font-size: 12.5px; fill: #1a5276; font-weight: bold; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; background: #fff; font-size: 13.5px; }
+  th, td { border: 1px solid #999; padding: 7px 8px; text-align: left; }
+  th { background: #1a5276; color: #fff; }
+  tr:nth-child(even) { background: #eef4f8; }
+  a { color: #1a5276; }
+  .note { background: #fdf2e9; border-left: 5px solid #e67e22; padding: 10px 14px; margin: 14px 0; font-size: 14px; }
+  .cutline { text-align: center; font-size: 13px; fill: #333; margin: 4px 0; }
+  footer { margin-top: 40px; font-size: 12px; color: #777; border-top: 1px solid #ccc; padding-top: 8px; }
+</style>
+</head>
+<body>
+
+<h1>Shallow Foundations — Theory, Figures, Sections &amp; Bar Details</h1>
+<p>Every type is shown as a <b>Plan (top view with bar layout)</b> + <b>Section A–A (with reinforcement)</b>, preceded by the complete design theory. Dimensions in mm; red arrows = dimension lines. Schematic, NOT to scale. Design per IS&nbsp;456:2000 / ACI&nbsp;318 / EC&nbsp;7.</p>
+
+<div class="note"><b>Common reinforcement rules (IS 456:2000, cl. 26.5):</b> Minimum steel in footings = 0.12% (Fe415) / 0.15% (Fe250) of gross section · clear cover ≥ 50 mm (75 mm where concrete cast on earth) · main bars Ø ≥ 10 mm · max spacing 300 mm (flexure: 3×t or 450 mm) · lap 50 d · dowels: 0.5% of column area, Ø ≥ 12 mm, development length L<sub>d</sub> = 40–50 Ø.</div>
+
+<!-- ==================================================================== -->
+<!-- THEORY -->
+<!-- ==================================================================== -->
+<h2>Theory of Shallow Foundations</h2>
+
+<h3>1. Load Transfer Mechanism</h3>
+<p>The footing acts as a <b>load-spreading membrane</b>: the column/wall load P (concentrated) is redistributed over a larger soil contact area A, producing a bearing pressure q = P/A. Two conditions must hold:</p>
+<ul>
+  <li><b>Bearing capacity:</b> q ≤ q<sub>all</sub> (no soil shear failure)</li>
+  <li><b>Settlement:</b> total &amp; differential settlement within limits (no structural damage)</li>
+</ul>
+<p>The footing also resists <b>erosion/uplift</b> by its self-weight and depth of embedment, and transmits lateral forces through friction/adhesion at the base.</p>
+
+<h3>2. Bearing Capacity Theory (Terzaghi, 1943)</h3>
+<p>Ultimate bearing capacity of a strip footing on soil (general shear failure):</p>
+<p><b>q<sub>ult</sub> = c·N<sub>c</sub> + q·N<sub>q</sub> + 0.5·γ·B·N<sub>γ</sub></b></p>
+<ul>
+  <li>c = cohesion, q = γ·D<sub>f</sub> (overburden at base), γ = unit weight, B = footing width</li>
+  <li>N<sub>c</sub>, N<sub>q</sub>, N<sub>γ</sub> = bearing capacity factors — functions of φ (angle of internal friction)</li>
+</ul>
+<p>For <b>square</b> footings: q<sub>ult</sub> = 1.3·c·N<sub>c</sub> + q·N<sub>q</sub> + 0.4·γ·B·N<sub>γ</sub><br>
+For <b>circular</b>: q<sub>ult</sub> = 1.3·c·N<sub>c</sub> + q·N<sub>q</sub> + 0.3·γ·B·N<sub>γ</sub><br>
+For <b>rectangular</b> (B × L): shape factors applied (IS 6403 / Vesic).</p>
+<p><b>Allowable bearing pressure:</b> q<sub>all</sub> = q<sub>ult</sub> / F.S. where F.S. = 2.5–3 (3 for permanent structures). The <b>net</b> pressure used in sizing: q<sub>net</sub> = q <sub>applied</sub> − γ·D<sub>f</sub>.</p>
+
+<h3>3. Settlement Theory</h3>
+<p>Settlement = immediate (elastic) + consolidation (clay) + secondary creep:</p>
+<p><b>Immediate:</b> S<sub>i</sub> = (q·B·(1−μ²)/E)·I<sub>f</sub>  &nbsp;(μ = Poisson's ratio, E = soil modulus, I<sub>f</sub> = influence factor)</p>
+<p><b>Consolidation:</b> S<sub>c</sub> = Σ (Δe/(1+e<sub>0</sub>))·H = Σ m<sub>v</sub>·Δσ·H &nbsp;(clays only; from oedometer test)</p>
+<ul>
+  <li>Allowable total settlement ≈ 25 mm (frames), 50 mm (masonry walls / rafts); differential ≈ 10–19 mm</li>
+  <li>Settlement controls <b>width B</b>; bearing capacity controls the <i>smaller</i> of the two computed areas (take the larger area)</li>
+</ul>
+
+<h3>4. Strength Design Theory (RCC footings, IS 456 / ACI 318)</h3>
+<ul>
+  <li><b>Bending moment:</b> footing acts as an inverted cantilever — soil pressure (upward) × projection = moment at column face; M<sub>u</sub> = q<sub>u</sub>·a²/2 per unit width (a = projection). Steel designed for M<sub>u</sub> · factored loads (×1.5).</li>
+  <li><b>One-way (beam) shear:</b> critical section at distance d from column face; τ<sub>v</sub> = V/(B·d) ≤ τ<sub>c,max</sub> (no shear steel allowed in footings ≤ 500 mm thick).</li>
+  <li><b>Two-way (punching) shear:</b> critical section at d/2 from column face, perimeter b<sub>0</sub> = 4(c+d); τ<sub>v</sub> = V/(b<sub>0</sub>·d) ≤ k·τ<sub>c</sub> (k = 0.5 + β, β = shorter/longer side ratio). <b>Usually governs the depth!</b></li>
+  <li><b>Thickness h</b> is therefore governed by <b>shear, not flexure</b> — typically h = 1.2–1.5× the flexural depth required.</li>
+  <li><b>Development length:</b> bars must be anchored over the projection: L<sub>d</sub> = (0.87·f<sub>y</sub>·Ø)/(4·τ<sub>bd</sub>) ≤ projection − cover; else bend bars / provide 90° hooks.</li>
+</ul>
+
+<h3>5. Eccentric Loading — "Middle Third" Rule</h3>
+<p>When the load resultant falls within the footing at eccentricity e:</p>
+<ul>
+  <li>q<sub>max</sub> = P/(B·L)·(1 + 6e/B), &nbsp;q<sub>min</sub> = P/(B·L)·(1 − 6e/B)</li>
+  <li><b>No tension rule:</b> keep e ≤ B/6 with the resultant <b>inside the middle third</b>, otherwise the footing lifts off the soil (or use effective area method: B′ = B − 2e, AASHTO).</li>
+  <li>The middle-third rule is why edge columns use <b>combined or strap footings</b> (resultant kept central).</li>
+</ul>
+
+<h3>6. Why Each Type Exists (selection theory)</h3>
+<table>
+  <tr><th>Type</th><th>Governing theory</th><th>Chosen when…</th></tr>
+  <tr><td>Strip</td><td>Line load → pressure per metre run; q = P/(L×B)</td><td>Load-bearing walls, light buildings</td></tr>
+  <tr><td>Spread</td><td>Point load → isolated pressure bulb; punching shear governs depth</td><td>Framed columns, moderate loads</td></tr>
+  <tr><td>Combined</td><td>Resultant pressure uniform by shifting centroid; trapezoidal shape balances unequal loads</td><td>Closely spaced columns / property line</td></tr>
+  <tr><td>Strap</td><td>Fixed-end beam distributes edge column moment; no soil pressure under strap</td><td>Property line + high bearing capacity soil</td></tr>
+  <tr><td>Mat</td><td>Plate on springs (Winkler / modulus of subgrade reaction k); large B reduces q and averages differential settlement</td><td>Weak soil, heavy/many columns, high water table</td></tr>
+</table>
+
+<h3>7. Key IS 456:2000 Clauses for Footings</h3>
+<ul>
+  <li><b>Cl. 34.1:</b> depth of footing may be reduced towards edges; min at edges 150 mm (on soil)</li>
+  <li><b>Cl. 34.2:</b> design for bending at column/wall face; transfer of load by bearing + dowels</li>
+  <li><b>Cl. 34.2.4:</b> shear — critical sections as described in theory 4</li>
+  <li><b>Cl. 34.3:</b> minimum reinforcement 0.12% (Fe415) / 0.15% (Fe250); spacing ≤ 3t or 450 mm</li>
+  <li><b>Cl. 34.4:</b> nominal cover 50 mm minimum for footings</li>
+</ul>
+
+<!-- ==================================================================== -->
+<!-- 1. STRIP FOOTING -->
+<!-- ==================================================================== -->
+<h2>1. Strip (Wall) Footing — Plan + Section</h2>
+<div class="fig">
+<div class="grid2">
+  <!-- PLAN -->
+  <div>
+  <h3>PLAN</h3>
+  <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="460" height="300" fill="#fff"/>
+    <!-- footing outline -->
+    <rect x="60" y="50" width="340" height="200" fill="#ffecb3" stroke="#333" stroke-width="2"/>
+    <!-- wall -->
+    <rect x="110" y="50" width="90" height="200" fill="#d7ccc8" stroke="#333"/>
+    <text x="155" y="160" class="lbl" fill="#333" text-anchor="middle" font-size="12">Wall 230</text>
+    <!-- longitudinal bars -->
+    <line x1="110" y1="80" x2="200" y2="80" stroke="#7b241c" stroke-width="3"/>
+    <line x1="110" y1="110" x2="200" y2="110" stroke="#7b241c" stroke-width="3"/>
+    <line x1="110" y1="140" x2="200" y2="140" stroke="#7b241c" stroke-width="3"/>
+    <line x1="110" y1="170" x2="200" y2="170" stroke="#7b241c" stroke-width="3"/>
+    <line x1="110" y1="200" x2="200" y2="200" stroke="#7b241c" stroke-width="3"/>
+    <line x1="110" y1="230" x2="200" y2="230" stroke="#7b241c" stroke-width="3"/>
+    <text x="300" y="90" class="bar">Main bars Ø10 @ 150 (parallel to wall)</text>
+    <!-- distribution bars (perpendicular, shown as dashes) -->
+    <line x1="240" y1="50" x2="240" y2="250" stroke="#7b241c" stroke-width="2" stroke-dasharray="6,4"/>
+    <line x1="280" y1="50" x2="280" y2="250" stroke="#7b241c" stroke-width="2" stroke-dasharray="6,4"/>
+    <line x1="320" y1="50" x2="320" y2="250" stroke="#7b241c" stroke-width="2" stroke-dasharray="6,4"/>
+    <line x1="360" y1="50" x2="360" y2="250" stroke="#7b241c" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="300" y="280" class="bar">Distribution Ø8 @ 200 (transverse)</text>
+    <!-- dims -->
+    <line x1="60" y1="30" x2="400" y2="30" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="60" y1="25" x2="60" y2="35" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="400" y1="25" x2="400" y2="35" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="24" class="dim" text-anchor="middle">Width B = 450–600 (min 300)</text>
+    <line x1="35" y1="50" x2="35" y2="250" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="30" y1="50" x2="40" y2="50" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="30" y1="250" x2="40" y2="250" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="14" y="155" class="dim" text-anchor="middle" transform="rotate(-90 20 155)">continuous length L</text>
+  </svg>
+  </div>
+  <!-- SECTION -->
+  <div>
+  <h3>SECTION A–A</h3>
+  <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="460" height="300" fill="#fff"/>
+    <rect x="0" y="255" width="460" height="45" fill="#8d6e63"/>
+    <!-- wall with vertical bars -->
+    <rect x="180" y="30" width="80" height="120" fill="#e8e8e8" stroke="#333"/>
+    <line x1="195" y1="30" x2="195" y2="150" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="210" y1="30" x2="210" y2="150" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="225" y1="30" x2="225" y2="150" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="240" y1="30" x2="240" y2="150" stroke="#7b241c" stroke-width="2.5"/>
+    <text x="220" y="95" class="bar" text-anchor="middle">Wall vert. Ø10 @ 150</text>
+    <!-- dowels -->
+    <line x1="195" y1="150" x2="195" y2="185" stroke="#2e4053" stroke-width="2.5"/>
+    <line x1="240" y1="150" x2="240" y2="185" stroke="#2e4053" stroke-width="2.5"/>
+    <text x="300" y="168" class="bar">Dowels Ø10 @ 300</text>
+    <!-- GL -->
+    <line x1="0" y1="150" x2="460" y2="150" stroke="#556b2f" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="40" y="142" class="lblw">GL</text>
+    <!-- footing -->
+    <rect x="130" y="150" width="180" height="70" fill="#b0bec5" stroke="#333" stroke-width="2"/>
+    <!-- long bars in section = dots -->
+    <circle cx="150" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="180" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="210" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="240" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="270" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="295" cy="205" r="3.5" fill="#7b241c"/>
+    <text x="220" y="222" class="bar" text-anchor="middle">Bars in section = dots (Ø10 @ 150)</text>
+    <!-- dist bars in section = lines -->
+    <line x1="130" y1="175" x2="310" y2="175" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="130" y1="205" x2="130" y2="205" stroke="none"/>
+    <text x="330" y="180" class="bar">Dist. Ø8 @ 200 (along)</text>
+    <!-- PCC -->
+    <rect x="130" y="220" width="180" height="17" fill="#cfd8dc" stroke="#555"/>
+    <text x="220" y="233" class="lblw" text-anchor="middle" font-size="11">PCC 75–100</text>
+    <!-- dims -->
+    <line x1="60" y1="192" x2="130" y2="192" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="60" y1="187" x2="60" y2="197" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="130" y1="187" x2="130" y2="197" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="95" y="186" class="dim" text-anchor="middle" font-size="11">Proj. 230</text>
+    <line x1="130" y1="285" x2="310" y2="285" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="220" y="299" class="dim" text-anchor="middle">B = 460–600</text>
+    <line x1="420" y1="220" x2="420" y2="150" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="415" y1="220" x2="425" y2="220" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="415" y1="150" x2="425" y2="150" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="432" y="190" class="dim" font-size="11">t=150–300</text>
+    <line x1="300" y1="70" x2="360" y2="70" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="330" y="62" class="dim" font-size="11">D ≥ 1000 (frost)</text>
+  </svg>
+  </div>
+</div>
+</div>
+
+<!-- ==================================================================== -->
+<!-- 2. SPREAD / ISOLATED FOOTING -->
+<!-- ==================================================================== -->
+<h2>2. Spread (Isolated) Footing — Plan + Section</h2>
+<div class="fig">
+<div class="grid2">
+  <!-- PLAN -->
+  <div>
+  <h3>PLAN</h3>
+  <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="460" height="300" fill="#fff"/>
+    <!-- footing -->
+    <rect x="80" y="40" width="300" height="220" fill="#ffecb3" stroke="#333" stroke-width="2"/>
+    <!-- column -->
+    <rect x="215" y="135" width="50" height="50" fill="#d7ccc8" stroke="#333"/>
+    <text x="240" y="165" class="lbl" fill="#333" text-anchor="middle" font-size="11">Col 300</text>
+    <!-- bars both ways -->
+    <line x1="80" y1="70" x2="380" y2="70" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="80" y1="105" x2="380" y2="105" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="80" y1="140" x2="215" y2="140" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="265" y1="140" x2="380" y2="140" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="80" y1="175" x2="380" y2="175" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="80" y1="210" x2="380" y2="210" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="80" y1="245" x2="380" y2="245" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="110" y1="40" x2="110" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="150" y1="40" x2="150" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="190" y1="40" x2="190" y2="135" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="265" y1="40" x2="265" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="305" y1="40" x2="305" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="345" y1="40" x2="345" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <text x="230" y="285" class="bar" text-anchor="middle">Mesh Ø12 @ 150 c/c BOTH ways (bottom)</text>
+    <!-- dims -->
+    <line x1="80" y1="18" x2="380" y2="18" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="80" y1="13" x2="80" y2="23" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="380" y1="13" x2="380" y2="23" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="12" class="dim" text-anchor="middle">B = L = 1200–2500</text>
+    <line x1="55" y1="40" x2="55" y2="260" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="55" y="155" class="dim" text-anchor="middle" transform="rotate(-90 55 155)">L = B</text>
+  </svg>
+  </div>
+  <!-- SECTION -->
+  <div>
+  <h3>SECTION A–A</h3>
+  <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="460" height="300" fill="#fff"/>
+    <rect x="0" y="255" width="460" height="45" fill="#8d6e63"/>
+    <!-- column with vertical bars + stirrups -->
+    <rect x="200" y="20" width="60" height="110" fill="#e8e8e8" stroke="#333"/>
+    <line x1="214" y1="20" x2="214" y2="130" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="228" y1="20" x2="228" y2="130" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="242" y1="20" x2="242" y2="130" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="215" y1="35" x2="245" y2="35" stroke="#2e4053" stroke-width="1.5"/>
+    <line x1="215" y1="65" x2="245" y2="65" stroke="#2e4053" stroke-width="1.5"/>
+    <line x1="215" y1="95" x2="245" y2="95" stroke="#2e4053" stroke-width="1.5"/>
+    <text x="330" y="75" class="bar">Col bars Ø12–16 + stirrups</text>
+    <!-- dowels -->
+    <line x1="214" y1="130" x2="214" y2="175" stroke="#2e4053" stroke-width="3"/>
+    <line x1="246" y1="130" x2="246" y2="175" stroke="#2e4053" stroke-width="3"/>
+    <text x="330" y="155" class="bar">Dowels Ø12 @ 150, Ld 600</text>
+    <!-- GL -->
+    <line x1="0" y1="130" x2="460" y2="130" stroke="#556b2f" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="40" y="122" class="lblw">GL</text>
+    <!-- footing -->
+    <rect x="105" y="130" width="250" height="85" fill="#b0bec5" stroke="#333" stroke-width="2"/>
+    <!-- sloped option hint -->
+    <line x1="105" y1="130" x2="185" y2="130" stroke="#999" stroke-width="1"/>
+    <text x="120" y="147" class="sub" font-size="10">sloped/stepped option</text>
+    <!-- bottom bars = dots (this section cuts across) -->
+    <circle cx="130" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="165" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="200" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="235" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="270" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="310" cy="205" r="3.5" fill="#7b241c"/>
+    <text x="230" y="226" class="bar" text-anchor="middle">Bottom mesh Ø12 @ 150 (dots)</text>
+    <!-- PCC -->
+    <rect x="105" y="215" width="250" height="20" fill="#cfd8dc" stroke="#555"/>
+    <text x="230" y="229" class="lblw" text-anchor="middle" font-size="11">PCC 75–100</text>
+    <!-- dims -->
+    <line x1="60" y1="178" x2="105" y2="178" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="82" y="172" class="dim" text-anchor="middle" font-size="11">Proj. 500</text>
+    <line x1="105" y1="288" x2="355" y2="288" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="302" class="dim" text-anchor="middle">B = 1500</text>
+    <line x1="430" y1="215" x2="430" y2="130" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="350" y="245" class="dim">h = 450–600</text>
+    <line x1="430" y1="130" x2="430" y2="20" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="445" y="75" class="dim" font-size="11">above GL: col length</text>
+  </svg>
+  </div>
+</div>
+</div>
+
+<!-- ==================================================================== -->
+<!-- 3. COMBINED FOOTING -->
+<!-- ==================================================================== -->
+<h2>3. Combined Footing — Plan + Section</h2>
+<div class="fig">
+<div class="grid2">
+  <!-- PLAN -->
+  <div>
+  <h3>PLAN</h3>
+  <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="460" height="300" fill="#fff"/>
+    <!-- footing -->
+    <rect x="50" y="40" width="360" height="200" fill="#ffecb3" stroke="#333" stroke-width="2"/>
+    <!-- columns -->
+    <rect x="120" y="115" width="45" height="45" fill="#d7ccc8" stroke="#333"/>
+    <rect x="290" y="115" width="45" height="45" fill="#d7ccc8" stroke="#333"/>
+    <text x="142" y="145" class="lbl" fill="#333" text-anchor="middle" font-size="11">C1</text>
+    <text x="312" y="145" class="lbl" fill="#333" text-anchor="middle" font-size="11">C2</text>
+    <!-- longitudinal bars -->
+    <line x1="50" y1="70" x2="410" y2="70" stroke="#7b241c" stroke-width="3"/>
+    <line x1="50" y1="95" x2="410" y2="95" stroke="#7b241c" stroke-width="3"/>
+    <line x1="50" y1="120" x2="120" y2="120" stroke="#7b241c" stroke-width="3"/>
+    <line x1="165" y1="120" x2="290" y2="120" stroke="#7b241c" stroke-width="3"/>
+    <line x1="335" y1="120" x2="410" y2="120" stroke="#7b241c" stroke-width="3"/>
+    <line x1="50" y1="145" x2="410" y2="145" stroke="#7b241c" stroke-width="3"/>
+    <line x1="50" y1="170" x2="410" y2="170" stroke="#7b241c" stroke-width="3"/>
+    <line x1="50" y1="195" x2="410" y2="195" stroke="#7b241c" stroke-width="3"/>
+    <line x1="50" y1="220" x2="410" y2="220" stroke="#7b241c" stroke-width="3"/>
+    <text x="230" y="278" class="bar" text-anchor="middle">Longitudinal Ø16 @ 150 (bottom &amp; top)</text>
+    <!-- transverse bars -->
+    <line x1="80" y1="85" x2="80" y2="190" stroke="#7b241c" stroke-width="2" stroke-dasharray="6,4"/>
+    <line x1="110" y1="85" x2="110" y2="190" stroke="#7b241c" stroke-width="2" stroke-dasharray="6,4"/>
+    <line x1="345" y1="85" x2="345" y2="190" stroke="#7b241c" stroke-width="2" stroke-dasharray="6,4"/>
+    <line x1="375" y1="85" x2="375" y2="190" stroke="#7b241c" stroke-width="2" stroke-dasharray="6,4"/>
+    <line x1="150" y1="65" x2="150" y2="210" stroke="#7b241c" stroke-width="2" stroke-dasharray="6,4"/>
+    <line x1="310" y1="65" x2="310" y2="210" stroke="#7b241c" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="230" y="30" class="bar">Transverse Ø12 @ 200</text>
+    <!-- dims -->
+    <line x1="50" y1="18" x2="410" y2="18" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="12" class="dim" text-anchor="middle">L = 3000–5000</text>
+    <line x1="30" y1="40" x2="30" y2="240" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="26" y="145" class="dim" text-anchor="middle" transform="rotate(-90 26 145)">B = 1000–2000</text>
+  </svg>
+  </div>
+  <!-- SECTION -->
+  <div>
+  <h3>SECTION A–A (longitudinal)</h3>
+  <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="460" height="300" fill="#fff"/>
+    <rect x="0" y="255" width="460" height="45" fill="#8d6e63"/>
+    <!-- columns -->
+    <rect x="130" y="25" width="45" height="105" fill="#e8e8e8" stroke="#333"/>
+    <rect x="285" y="25" width="45" height="105" fill="#e8e8e8" stroke="#333"/>
+    <line x1="142" y1="25" x2="142" y2="130" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="164" y1="25" x2="164" y2="130" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="297" y1="25" x2="297" y2="130" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="319" y1="25" x2="319" y2="130" stroke="#7b241c" stroke-width="2.5"/>
+    <text x="230" y="60" class="capt">C1 300</text>
+    <text x="352" y="60" class="capt">C2 300</text>
+    <!-- GL -->
+    <line x1="0" y1="130" x2="460" y2="130" stroke="#556b2f" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="40" y="122" class="lblw">GL</text>
+    <!-- footing -->
+    <rect x="70" y="130" width="320" height="85" fill="#b0bec5" stroke="#333" stroke-width="2"/>
+    <!-- top bars -->
+    <line x1="85" y1="140" x2="375" y2="140" stroke="#1a5276" stroke-width="2.5"/>
+    <text x="230" y="152" class="bar" text-anchor="middle" font-size="11">Top Ø16 @ 150</text>
+    <!-- bottom bars dots -->
+    <circle cx="95" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="145" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="195" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="245" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="295" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="345" cy="205" r="3.5" fill="#7b241c"/>
+    <circle cx="385" cy="205" r="3.5" fill="#7b241c"/>
+    <text x="230" y="226" class="bar" text-anchor="middle" font-size="11">Bottom Ø16 @ 150 (dots)</text>
+    <rect x="70" y="215" width="320" height="20" fill="#cfd8dc" stroke="#555"/>
+    <!-- dims -->
+    <line x1="70" y1="288" x2="390" y2="288" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="302" class="dim" text-anchor="middle">L = 3000–5000</text>
+    <line x1="420" y1="215" x2="420" y2="130" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="432" y="178" class="dim">t=400–700</text>
+    <line x1="175" y1="70" x2="285" y2="70" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="63" class="dim" text-anchor="middle">c/c = 2500–4000</text>
+  </svg>
+  </div>
+</div>
+</div>
+
+<!-- ==================================================================== -->
+<!-- 4. STRAP FOOTING -->
+<!-- ==================================================================== -->
+<h2>4. Strap (Cantilever) Footing — Plan + Section</h2>
+<div class="fig">
+<div class="grid2">
+  <!-- PLAN -->
+  <div>
+  <h3>PLAN</h3>
+  <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="460" height="300" fill="#fff"/>
+    <!-- pads -->
+    <rect x="60" y="70" width="120" height="140" fill="#ffecb3" stroke="#333" stroke-width="2"/>
+    <rect x="260" y="70" width="140" height="140" fill="#ffecb3" stroke="#333" stroke-width="2"/>
+    <!-- strap beam -->
+    <rect x="180" y="110" width="80" height="60" fill="#90a4ae" stroke="#333" stroke-width="2"/>
+    <!-- columns -->
+    <rect x="110" y="135" width="30" height="30" fill="#d7ccc8" stroke="#333"/>
+    <rect x="315" y="135" width="30" height="30" fill="#d7ccc8" stroke="#333"/>
+    <!-- bars pads -->
+    <line x1="60" y1="95" x2="180" y2="95" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="60" y1="125" x2="180" y2="125" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="60" y1="155" x2="180" y2="155" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="60" y1="185" x2="180" y2="185" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="260" y1="95" x2="400" y2="95" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="260" y1="125" x2="400" y2="125" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="260" y1="155" x2="400" y2="155" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="260" y1="185" x2="400" y2="185" stroke="#7b241c" stroke-width="2.5"/>
+    <!-- strap beam bars -->
+    <line x1="180" y1="120" x2="260" y2="120" stroke="#1a5276" stroke-width="2.5"/>
+    <line x1="180" y1="162" x2="260" y2="162" stroke="#1a5276" stroke-width="2.5"/>
+    <line x1="205" y1="110" x2="205" y2="170" stroke="#2e4053" stroke-width="1.5"/>
+    <line x1="235" y1="110" x2="235" y2="170" stroke="#2e4053" stroke-width="1.5"/>
+    <text x="220" y="105" class="bar" text-anchor="middle" font-size="11">Strap Ø16 top+bottom</text>
+    <text x="220" y="278" class="bar" text-anchor="middle">Pads mesh Ø12 @ 150 both ways</text>
+    <!-- dims -->
+    <line x1="60" y1="50" x2="180" y2="50" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="120" y="44" class="dim" text-anchor="middle" font-size="11">Pad 1200</text>
+    <line x1="260" y1="50" x2="400" y2="50" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="330" y="44" class="dim" text-anchor="middle" font-size="11">Pad 1400–1800</text>
+    <line x1="410" y1="110" x2="410" y2="170" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="422" y="145" class="dim" font-size="11">Strap 300 wide</text>
+    <line x1="40" y1="70" x2="40" y2="210" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="34" y="145" class="dim" text-anchor="middle" transform="rotate(-90 34 145)" font-size="11">B</text>
+  </svg>
+  </div>
+  <!-- SECTION -->
+  <div>
+  <h3>SECTION A–A (through strap)</h3>
+  <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="460" height="300" fill="#fff"/>
+    <rect x="0" y="263" width="460" height="37" fill="#8d6e63"/>
+    <!-- pads -->
+    <rect x="60" y="185" width="130" height="50" fill="#b0bec5" stroke="#333" stroke-width="2"/>
+    <rect x="270" y="185" width="130" height="50" fill="#b0bec5" stroke="#333" stroke-width="2"/>
+    <!-- strap beam -->
+    <rect x="190" y="185" width="80" height="55" fill="#90a4ae" stroke="#333" stroke-width="2"/>
+    <!-- gap under strap -->
+    <rect x="190" y="240" width="80" height="23" fill="#fafafa" stroke="#999" stroke-dasharray="3,3"/>
+    <text x="230" y="255" class="sub" text-anchor="middle" font-size="10">void (no soil contact)</text>
+    <!-- column above -->
+    <rect x="212" y="90" width="36" height="95" fill="#e8e8e8" stroke="#333"/>
+    <line x1="220" y1="90" x2="220" y2="185" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="240" y1="90" x2="240" y2="185" stroke="#7b241c" stroke-width="2.5"/>
+    <!-- GL -->
+    <line x1="0" y1="90" x2="460" y2="90" stroke="#556b2f" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="40" y="82" class="lblw">GL</text>
+    <!-- pad dots -->
+    <circle cx="85" cy="223" r="3.5" fill="#7b241c"/>
+    <circle cx="130" cy="223" r="3.5" fill="#7b241c"/>
+    <circle cx="300" cy="223" r="3.5" fill="#7b241c"/>
+    <circle cx="345" cy="223" r="3.5" fill="#7b241c"/>
+    <!-- strap beam bars -->
+    <line x1="198" y1="192" x2="262" y2="192" stroke="#1a5276" stroke-width="2.5"/>
+    <line x1="198" y1="233" x2="262" y2="233" stroke="#1a5276" stroke-width="2.5"/>
+    <!-- stirrups -->
+    <path d="M 200 192 L 200 233" stroke="#2e4053" stroke-width="1.5"/>
+    <path d="M 222 192 L 222 233" stroke="#2e4053" stroke-width="1.5"/>
+    <path d="M 244 192 L 244 233" stroke="#2e4053" stroke-width="1.5"/>
+    <text x="335" y="150" class="bar">Strap: Ø16 top &amp; bottom,</text>
+    <text x="335" y="165" class="bar">stirrups Ø8 @ 150</text>
+    <text x="100" y="178" class="bar" text-anchor="middle" font-size="11">Pad mesh Ø12</text>
+    <!-- dims -->
+    <line x1="60" y1="288" x2="190" y2="288" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="125" y="302" class="dim" text-anchor="middle">Pad</text>
+    <line x1="270" y1="288" x2="400" y2="288" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="335" y="302" class="dim" text-anchor="middle">Pad</text>
+    <line x1="190" y1="240" x2="270" y2="240" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="282" class="dim" text-anchor="middle" font-size="11">Strap 300</text>
+  </svg>
+  </div>
+</div>
+</div>
+
+<!-- ==================================================================== -->
+<!-- 5. MAT / RAFT -->
+<!-- ==================================================================== -->
+<h2>5. Mat (Raft) Foundation — Plan + Section</h2>
+<div class="fig">
+<div class="grid2">
+  <!-- PLAN -->
+  <div>
+  <h3>PLAN</h3>
+  <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="460" height="300" fill="#fff"/>
+    <!-- raft plan -->
+    <rect x="40" y="30" width="380" height="230" fill="#ffecb3" stroke="#333" stroke-width="2"/>
+    <!-- columns -->
+    <rect x="100" y="80" width="28" height="28" fill="#d7ccc8" stroke="#333"/>
+    <rect x="216" y="80" width="28" height="28" fill="#d7ccc8" stroke="#333"/>
+    <rect x="332" y="80" width="28" height="28" fill="#d7ccc8" stroke="#333"/>
+    <rect x="100" y="196" width="28" height="28" fill="#d7ccc8" stroke="#333"/>
+    <rect x="216" y="196" width="28" height="28" fill="#d7ccc8" stroke="#333"/>
+    <rect x="332" y="196" width="28" height="28" fill="#d7ccc8" stroke="#333"/>
+    <!-- top mesh -->
+    <line x1="40" y1="55" x2="420" y2="55" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="40" y1="90" x2="420" y2="90" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="40" y1="125" x2="420" y2="125" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="40" y1="160" x2="420" y2="160" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="40" y1="195" x2="420" y2="195" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="40" y1="230" x2="420" y2="230" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="65" y1="30" x2="65" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="100" y1="30" x2="100" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="135" y1="30" x2="135" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="170" y1="30" x2="170" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="205" y1="30" x2="205" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="240" y1="30" x2="240" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="275" y1="30" x2="275" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="310" y1="30" x2="310" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="345" y1="30" x2="345" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="380" y1="30" x2="380" y2="260" stroke="#7b241c" stroke-width="2.5"/>
+    <text x="230" y="290" class="bar" text-anchor="middle">Top + bottom mesh Ø16 @ 200 both ways</text>
+    <!-- spacing dim -->
+    <line x1="135" y1="275" x2="170" y2="275" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="152" y="270" class="dim" text-anchor="middle" font-size="11">@200</text>
+    <line x1="40" y1="10" x2="420" y2="10" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="24" class="dim" text-anchor="middle">Building plan L × B</text>
+  </svg>
+  </div>
+  <!-- SECTION -->
+  <div>
+  <h3>SECTION A–A</h3>
+  <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="460" height="300" fill="#fff"/>
+    <rect x="0" y="258" width="460" height="42" fill="#8d6e63"/>
+    <!-- columns -->
+    <rect x="90" y="25" width="40" height="110" fill="#e8e8e8" stroke="#333"/>
+    <rect x="210" y="25" width="40" height="110" fill="#e8e8e8" stroke="#333"/>
+    <rect x="330" y="25" width="40" height="110" fill="#e8e8e8" stroke="#333"/>
+    <line x1="100" y1="25" x2="100" y2="135" stroke="#7b241c" stroke-width="2.5"/>
+    <line x1="120" y1="25" x2="120" y2="135" stroke="#7b241c" stroke-width="2.5"/>
+    <!-- GL -->
+    <line x1="0" y1="135" x2="460" y2="135" stroke="#556b2f" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="40" y="127" class="lblw">GL</text>
+    <!-- raft slab -->
+    <rect x="50" y="135" width="360" height="75" fill="#b0bec5" stroke="#333" stroke-width="2"/>
+    <!-- top mesh -->
+    <line x1="60" y1="144" x2="400" y2="144" stroke="#1a5276" stroke-width="2.5"/>
+    <!-- bottom mesh -->
+    <line x1="60" y1="201" x2="400" y2="201" stroke="#7b241c" stroke-width="2.5"/>
+    <text x="230" y="158" class="bar" text-anchor="middle" font-size="11">Top mesh Ø16 @ 200</text>
+    <text x="230" y="217" class="bar" text-anchor="middle" font-size="11">Bottom mesh Ø16 @ 200</text>
+    <rect x="50" y="210" width="360" height="18" fill="#cfd8dc" stroke="#555"/>
+    <text x="230" y="224" class="lblw" text-anchor="middle" font-size="11">Blinding 75–100</text>
+    <!-- dims -->
+    <line x1="50" y1="288" x2="410" y2="288" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="302" class="dim" text-anchor="middle">Full footprint</text>
+    <line x1="430" y1="210" x2="430" y2="135" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="402" y="180" class="dim">t = 500–1500</text>
+    <line x1="130" y1="12" x2="210" y2="12" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="170" y="0" class="dim" text-anchor="middle">c/c = 3000–7500</text>
+    <text x="60" y="45" class="sub" font-size="11">Dowels &amp; starter bars,</text>
+    <text x="60" y="58" class="sub" font-size="11">Ld into slab</text>
+  </svg>
+  </div>
+</div>
+</div>
+
+<!-- ==================================================================== -->
+<h2>Bar Bending Schedule (BBS) — Typical per Foundation</h2>
+<table>
+  <tr><th>Member</th><th>Bar</th><th>Size</th><th>Spacing</th><th>Placement</th><th>Cover</th></tr>
+  <tr><td rowspan="2">Strip footing</td><td>Main</td><td>Ø10–12</td><td>150–200</td><td>Bottom, along wall</td><td rowspan="2">50 mm (75 on earth)</td></tr>
+  <tr><td>Distribution</td><td>Ø8</td><td>200–250</td><td>Above main, transverse</td></tr>
+  <tr><td rowspan="2">Spread footing</td><td>Main mesh</td><td>Ø12–16</td><td>150 c/c both ways</td><td>Bottom layer (X &amp; Y)</td><td>50 mm</td></tr>
+  <tr><td>Dowels (column)</td><td>Ø12</td><td>@ 150</td><td>Into footing, L<sub>d</sub> = 40–50Ø</td><td>40 mm</td></tr>
+  <tr><td rowspan="2">Combined footing</td><td>Longitudinal</td><td>Ø16–20</td><td>150</td><td>Top + bottom</td><td rowspan="2">50 mm</td></tr>
+  <tr><td>Transverse</td><td>Ø12</td><td>200</td><td>Uniformly (under columns closer)</td></tr>
+  <tr><td rowspan="2">Strap footing</td><td>Pads mesh</td><td>Ø12</td><td>150 both ways</td><td>Bottom of both pads</td><td rowspan="2">50 mm</td></tr>
+  <tr><td>Strap beam</td><td>Ø16 top &amp; bottom</td><td>—</td><td>Beam length + stirrups Ø8 @ 150</td><td>40 mm</td></tr>
+  <tr><td rowspan="2">Mat / raft</td><td>Top mesh</td><td>Ø16–20</td><td>150–300 both ways</td><td>Near top face (negative moment)</td><td rowspan="2">50 mm top, 75 mm bottom</td></tr>
+  <tr><td>Bottom mesh</td><td>Ø16–20</td><td>150–300 both ways</td><td>Near bottom face (positive moment)</td></tr>
+</table>
+
+<h2>Typical Size Summary Table</h2>
+<table>
+  <tr><th>Type</th><th>Plan size</th><th>Thickness / depth</th><th>Rebar</th><th>Load range</th></tr>
+  <tr><td>Strip footing</td><td>Width 450–600 (min 300)</td><td>t 150–300; D ≥ 1 m</td><td>Ø10–12 @ 150–200 + Ø8 @ 200</td><td>Walls, ≤ 2–3 storey</td></tr>
+  <tr><td>Spread (isolated)</td><td>1200–2500 sq/rect</td><td>h 300–600</td><td>Ø12–16 @ 150 both ways + dowels</td><td>Columns 10–500 kips</td></tr>
+  <tr><td>Combined</td><td>3000–5000 × 1000–2000</td><td>t 400–700</td><td>Ø16–20 long. + Ø12 trans.</td><td>2 columns, edge loads</td></tr>
+  <tr><td>Strap</td><td>Pads 1200–2400 + strap 300–450</td><td>Pads 300–600; strap 500–700</td><td>Ø12 pads; Ø16+Ø8 strap</td><td>Edge columns</td></tr>
+  <tr><td>Mat / raft</td><td>Full footprint</td><td>t 500–1500</td><td>Ø16–20 top + bottom @ 200</td><td>Heavy / many columns</td></tr>
+</table>
+
+<div class="note"><b>Sizing rule of thumb:</b> A = P ÷ q<sub>all</sub>; projection ≈ 0.5 × h; depth from shear (no shear steel for footings &lt; 500 mm); min embedment 0.5 m into firm soil, ≥ frost depth. <b>Cover:</b> 50 mm sides/top, 75 mm cast against earth (IS 456).</div>
+
+<h2>Links &amp; References (with figures)</h2>
+<ul>
+  <li><a href="https://www.dimensions.com/element/building-foundation-raft">Dimensions.com — Raft Foundation scaled drawings</a></li>
+  <li><a href="https://civiltutorials.com/shallow-foundation-types-5/">CivilTutorials — Shallow Foundation Types, Comparison &amp; Details</a></li>
+  <li><a href="https://civilenggblitz.com/the-complete-guide-for-strip-footing/">CivilEnggBlitz — Strip Footing Complete Guide (IS 456 design steps)</a></li>
+  <li><a href="https://infralens.in/handbook/footing-design-charts">InfraLens — Footing design quick charts per IS 456 (sizes for loads)</a></li>
+  <li><a href="https://dartistech.com/designing-shallow-foundation-dimensions">DartisTech — Designing Shallow Foundation Dimensions</a></li>
+  <li><a href="https://priodeep.weebly.com/uploads/6/5/4/9/65495087/mat__raft_foundation.pdf">NPTEL — Mat (Raft) Foundations module PDF (figure-rich)</a></li>
+  <li><a href="https://testbook.com/bn/civil-engineering/raft-foundation-definition-types-and-diagram">Testbook — Raft Foundations with diagrams</a></li>
+  <li><a href="https://dot.ca.gov/-/media/dot-media/programs/engineering/documents/bridge-design-practices/202408bdpchapter101shallowfoundationsa11y.pdf">Caltrans BDP 10.1 — Shallow Foundations (AASHTO)</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Shallow_foundation">Wikipedia — Shallow Foundation</a></li>
+  <li><a href="https://www.scribd.com/document/117591431/Footing-Spec-as-Per-is-456-2000">IS 456:2000 — Footing specification summary</a></li>
+</ul>
+
+<p class="sub">Codes: IS 456:2000 (India) · ACI 318 Ch. 13 / IBC Ch. 18 (US) · Eurocode 7 (EU) · IRC R403 (US residential).</p>
+
+<footer>Generated reference sheet — schematic figures NOT to scale. Verify all sizes and bar schedules against geotechnical report and code before construction.</footer>
+</body>
+</html>
