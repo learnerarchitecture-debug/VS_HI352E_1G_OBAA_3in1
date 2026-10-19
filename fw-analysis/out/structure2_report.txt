@@ -1,0 +1,263 @@
+== family A: 1327 occurrences ==
+64K bins: 0x370000:215  0x380000:215  0x390000:232  0x3a0000:235  0x3b0000:215  0x3c0000:215
+== family B: 2050 occurrences ==
+64K bins: 0x0:8  0x10000:14  0x70000:49  0x160000:5  0x360000:6  0x370000:120  0x380000:8  0x390000:2  0x3a0000:281  0x3b0000:8  0x3c0000:7  0x3d0000:12  0x3e0000:490  0x3f0000:1040
+
+== A runs (>=3 blocks): 205 ==
+  0x375eb0 .. 0x375ef0  (5 blocks)
+  0x375f10 .. 0x375f50  (5 blocks)
+  0x375f70 .. 0x375fc0  (6 blocks)
+  0x375fe0 .. 0x376020  (5 blocks)
+  0x376040 .. 0x376080  (5 blocks)
+  0x3760a0 .. 0x3760f0  (6 blocks)
+  0x376110 .. 0x376150  (5 blocks)
+  0x376170 .. 0x3761b0  (5 blocks)
+  0x3761d0 .. 0x376220  (6 blocks)
+  0x376240 .. 0x376280  (5 blocks)
+  0x3762a0 .. 0x3762e0  (5 blocks)
+  0x376300 .. 0x376350  (6 blocks)
+  0x376370 .. 0x3763b0  (5 blocks)
+  0x3763d0 .. 0x376410  (5 blocks)
+  0x376430 .. 0x376480  (6 blocks)
+  0x3764a0 .. 0x3764e0  (5 blocks)
+  0x376500 .. 0x376540  (5 blocks)
+  0x376560 .. 0x3765a0  (5 blocks)
+  0x3765c0 .. 0x376610  (6 blocks)
+  0x376630 .. 0x376670  (5 blocks)
+  0x376690 .. 0x3766d0  (5 blocks)
+  0x3766f0 .. 0x376740  (6 blocks)
+  0x376760 .. 0x3767a0  (5 blocks)
+  0x3767c0 .. 0x376800  (5 blocks)
+  0x376820 .. 0x376870  (6 blocks)
+  0x376890 .. 0x3768d0  (5 blocks)
+  0x3768f0 .. 0x376930  (5 blocks)
+  0x376950 .. 0x3769a0  (6 blocks)
+  0x3769c0 .. 0x376a00  (5 blocks)
+  0x376a20 .. 0x376a60  (5 blocks)
+  0x376a80 .. 0x376ad0  (6 blocks)
+  0x376af0 .. 0x376b30  (5 blocks)
+  0x376b50 .. 0x376b90  (5 blocks)
+  0x376bb0 .. 0x376bf0  (5 blocks)
+  0x376c10 .. 0x376c60  (6 blocks)
+  0x376c80 .. 0x376cc0  (5 blocks)
+  0x376ce0 .. 0x376d20  (5 blocks)
+  0x376d40 .. 0x376d90  (6 blocks)
+  0x376db0 .. 0x376df0  (5 blocks)
+  0x376e10 .. 0x376e50  (5 blocks)
+  0x376e70 .. 0x376e90  (3 blocks)
+  0x388b40 .. 0x388b80  (5 blocks)
+  0x388ba0 .. 0x388be0  (5 blocks)
+  0x388c00 .. 0x388c50  (6 blocks)
+  0x388c70 .. 0x388cb0  (5 blocks)
+  0x388cd0 .. 0x388d10  (5 blocks)
+  0x388d30 .. 0x388d80  (6 blocks)
+  0x388da0 .. 0x388de0  (5 blocks)
+  0x388e00 .. 0x388e40  (5 blocks)
+  0x388e60 .. 0x388eb0  (6 blocks)
+  0x388ed0 .. 0x388f10  (5 blocks)
+  0x388f30 .. 0x388f70  (5 blocks)
+  0x388f90 .. 0x388fe0  (6 blocks)
+  0x389000 .. 0x389040  (5 blocks)
+  0x389060 .. 0x3890a0  (5 blocks)
+  0x3890c0 .. 0x389100  (5 blocks)
+  0x389120 .. 0x389170  (6 blocks)
+  0x389190 .. 0x3891d0  (5 blocks)
+  0x3891f0 .. 0x389230  (5 blocks)
+  0x389250 .. 0x3892a0  (6 blocks)
+
+== B runs (>=3 blocks): 47 ==
+  0x4970 .. 0x49e0  (8 blocks)
+  0x110a0 .. 0x110c0  (3 blocks)
+  0x73ce0 .. 0x73fe0  (49 blocks)
+  0x1664c0 .. 0x166500  (5 blocks)
+  0x3724e0 .. 0x372b60  (105 blocks)
+  0x373330 .. 0x3733c0  (10 blocks)
+  0x3a5f80 .. 0x3a6770  (128 blocks)
+  0x3a6820 .. 0x3a7010  (128 blocks)
+  0x3a85f0 .. 0x3a8650  (7 blocks)
+  0x3ac350 .. 0x3ac3a0  (6 blocks)
+  0x3ac3c0 .. 0x3ac420  (7 blocks)
+  0x3db0c0 .. 0x3db0f0  (4 blocks)
+  0x3db1c0 .. 0x3db1f0  (4 blocks)
+  0x3db340 .. 0x3db370  (4 blocks)
+  0x3e0580 .. 0x3e0630  (12 blocks)
+  0x3e0690 .. 0x3e06b0  (3 blocks)
+  0x3e1580 .. 0x3e1630  (12 blocks)
+  0x3e1690 .. 0x3e16b0  (3 blocks)
+  0x3e1d80 .. 0x3e1e30  (12 blocks)
+  0x3e1e90 .. 0x3e1eb0  (3 blocks)
+  0x3e2830 .. 0x3e2ea0  (104 blocks)
+  0x3e2ec0 .. 0x3e2fe0  (19 blocks)
+  0x3e3d80 .. 0x3e3fe0  (39 blocks)
+  0x3e6830 .. 0x3e6fe0  (124 blocks)
+  0x3ea080 .. 0x3ea3f0  (56 blocks)
+  0x3ea410 .. 0x3ea440  (4 blocks)
+  0x3ef590 .. 0x3ef7e0  (38 blocks)
+  0x3efd90 .. 0x3effe0  (38 blocks)
+  0x3f0030 .. 0x3f07e0  (124 blocks)
+  0x3f0880 .. 0x3f0fe0  (119 blocks)
+  0x3f2080 .. 0x3f2290  (34 blocks)
+  0x3f22b0 .. 0x3f27e0  (84 blocks)
+  0x3f2d90 .. 0x3f2fe0  (38 blocks)
+  0x3f3030 .. 0x3f37e0  (124 blocks)
+  0x3f3880 .. 0x3f3fe0  (119 blocks)
+  0x3f4830 .. 0x3f4c10  (63 blocks)
+  0x3f4c30 .. 0x3f4fe0  (60 blocks)
+  0x3f5580 .. 0x3f57e0  (39 blocks)
+  0x3f5830 .. 0x3f5fe0  (124 blocks)
+  0x3f9590 .. 0x3f97e0  (38 blocks)
+  0x3f9880 .. 0x3f98b0  (4 blocks)
+  0x3f9980 .. 0x3f9a30  (12 blocks)
+  0x3f9b00 .. 0x3f9b40  (5 blocks)
+  0x3f9b60 .. 0x3f9bb0  (6 blocks)
+  0x3f9c60 .. 0x3f9d30  (14 blocks)
+  0x3f9de0 .. 0x3f9eb0  (14 blocks)
+  0x3f9f60 .. 0x3f9fe0  (9 blocks)
+
+== dump 0x367a60-0x367da0 (544-period cluster) ==
+  367a60  c0 91 7c a8 cb c5 9f 57 31 c3 10 55 c8 04 51 e1  ..|....W1..U..Q.
+  367a70  c0 28 4d 4b 9a e3 06 25 c3 b4 9a 17 29 f5 53 b0  .(MK...%....).S.
+  367a80  e2 a8 0d 4b 7a c1 02 8d c7 b1 9e 52 a9 a5 57 24  ...Kz......R..W$
+  367a90  c0 28 4f 5d fa c3 00 25 e3 a5 9e 42 21 f9 53 fc  .(O]...%...B!.S.
+  367aa0  c0 88 47 59 f8 e3 56 25 c7 4f 8e 82 29 b5 57 20  ..GY..V%.O..).W 
+  367ab0  c0 28 8f 59 da cb 02 05 c7 b1 8a 57 a9 a5 5b a2  .(.Y.......W..[.
+  367ac0  d1 28 4d 03 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(M....%...B..S.
+  367ad0  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  367ae0  c0 28 4d 4b da e3 04 25 c3 3d 9c 43 ad b5 53 a8  .(MK...%.=.C..S.
+  367af0  c0 28 e5 59 be eb 06 25 c3 b5 8e 42 21 e5 53 a0  .(.Y...%...B!.S.
+  367b00  c0 28 4f 49 9e e3 06 0d c3 b5 8e 42 a1 f5 43 a0  .(OI.......B..C.
+  367b10  c0 28 cf 4b 9a e3 00 2d c7 bf 1c 63 ad ad 73 f0  .(.K...-...c..s.
+  367b20  c1 aa 29 43 9a a3 06 27 e7 a5 be 52 99 84 51 a1  ..)C...'...R..Q.
+  367b30  c0 28 c7 5f da e1 07 25 c3 bf 9e 62 ad a1 53 e0  .(._...%...b..S.
+  367b40  c0 28 6d 5b da e1 47 25 c3 a5 9e 42 a9 a5 53 a0  .(m[..G%...B..S.
+  367b50  c0 28 ef 49 da e1 07 25 c3 b5 9e 42 a9 a1 51 a0  .(.I...%...B..Q.
+  367b60  c0 28 ef 49 d8 e1 13 25 42 a5 9e 47 a9 a5 53 a0  .(.I...%B..G..S.
+  367b70  c0 28 ef 49 da e1 07 25 c3 b5 9e 42 a9 85 51 a1  .(.I...%...B..Q.
+  367b80  c0 28 ef 49 fa 61 07 05 c3 f1 9e 13 a9 a5 53 a0  .(.I.a........S.
+  367b90  c0 28 cd cd da e1 07 25 d3 b5 9e c2 a8 a5 57 a0  .(.....%......W.
+  367ba0  c0 28 cd cd da e1 07 25 c3 bd 9e 42 ac a1 d3 a0  .(.....%...B....
+  367bb0  c0 08 0d 4b 1a a3 06 25 c3 35 9c 42 a9 ac 53 a0  ...K...%.5.B..S.
+  367bc0  e0 08 6b 41 1b f2 a6 25 c7 b5 9e 42 a9 b5 57 20  ..kA...%...B..W 
+  367bd0  c0 28 e7 db d8 c1 53 25 c3 b4 ae 42 a9 a5 53 a0  .(....S%...B..S.
+  367be0  c0 28 ef 49 9a e1 05 2d c3 b5 8e 42 a9 a5 57 a0  .(.I...-...B..W.
+  367bf0  c0 28 ef 49 da e1 07 25 c7 b4 9e 42 a9 a5 53 a0  .(.I...%...B..S.
+  367c00  c0 28 ef 49 da e9 07 25 c3 b5 9a 42 a9 a5 53 a0  .(.I...%...B..S.
+  367c10  a0 08 2f 5d 02 a4 af 65 c3 b5 9e 42 a9 a5 53 a0  ../]...e...B..S.
+  367c20  c0 28 cf cf da e9 07 2d c7 b5 9a 42 21 a7 43 30  .(.....-...B!.C0
+  367c30  c0 28 ef 49 5a b0 07 25 d3 b5 9e 42 e9 a5 53 a0  .(.IZ..%...B..S.
+  367c40  80 08 4f 5f 93 b1 0e 25 c3 b5 9e 42 e9 25 53 a0  ..O_...%...B.%S.
+  367c50  c0 08 0d 4b 1a a3 06 25 c3 35 9c 42 a9 ac 53 a0  ...K...%.5.B..S.
+  367c60  c0 28 49 43 1a a3 06 25 c3 35 9c 42 a9 ac 53 a0  .(IC...%.5.B..S.
+  367c70  c0 08 0b 57 7e 8b 10 24 55 7f a5 75 fc 53 ec a1  ...W~..$U..u.S..
+  367c80  c8 37 78 a8 a4 be c3 7c 31 13 92 70 4a 01 53 33  .7x....|1..pJ.S3
+  367c90  c0 22 4d 6a 9a e3 06 25 c3 b5 9e 42 8d a1 71 a9  ."Mj...%...B..q.
+  367ca0  c1 22 4d 62 7b e7 f7 25 81 37 9f 4a b9 ac 73 a1  ."Mb{..%.7.J..s.
+  367cb0  c0 6a 59 4b 12 b1 8e 25 c3 b7 1d 4a ee 27 5b a4  .jYK...%...J.'[.
+  367cc0  c9 6a 4d 2a 92 a3 8e 27 53 0d 8e c1 a9 80 53 a9  .jM*...'S.....S.
+  367cd0  c0 2a 59 63 9a b3 0e 27 c3 3f 1d 62 99 a4 73 a8  .*Yc...'.?.b..s.
+  367ce0  68 98 4e 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  h.NK...%...B..S.
+  367cf0  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  367d00  c0 28 4d 4b 9a e3 06 25 c3 35 9c 43 ad a5 53 b8  .(MK...%.5.C..S.
+  367d10  c0 68 4d 4b 8a e2 86 27 c1 bd 96 4a a9 ad 53 a0  .hMK...'...J..S.
+  367d20  c0 28 5d 6b 9a f2 0e 25 c1 b5 17 42 a9 ad 53 a0  .(]k...%...B..S.
+  367d30  c0 68 4d 0a 9a e3 0e 27 c7 b6 1c 67 a9 a3 7f b0  .hM....'...g....
+  367d40  c9 88 0f 4b 12 eb 84 25 c3 b5 9e 42 f9 15 e3 2c  ...K...%...B...,
+  367d50  c0 28 4d 4b 98 f3 ca 62 c3 b5 9e 47 a9 e5 5b b0  .(MK...b...G..[.
+  367d60  c0 28 4d 4b 98 f3 c2 20 c3 b7 9e 42 a9 a5 53 a8  .(MK... ...B..S.
+  367d70  c0 28 4d 4b 98 f2 ca 22 c3 b5 9e 42 a1 e5 43 a0  .(MK..."...B..C.
+  367d80  c0 28 4d 4b 98 f2 ca 22 c3 b7 de 62 ac a1 d3 a0  .(MK..."...b....
+  367d90  c0 28 4d 4b 98 f2 ca 22 c3 b5 9e 42 29 a5 53 20  .(MK..."...B).S 
+
+== dump 0x372480-0x3725a0 (big B-run start) ==
+  372480  c0 60 9b 71 0b b3 2e 65 81 31 9d 4a b8 a4 d3 a1  .`.q...e.1.J....
+  372490  c0 60 1b 73 0b f3 2e 65 81 30 99 4a 98 a4 d1 a1  .`.s...e.0.J....
+  3724a0  c0 40 99 73 0b b3 26 67 85 31 9d 4a 98 a5 d1 a1  .@.s..&g.1.J....
+  3724b0  c0 0a 9f e9 1b b2 2e 67 c7 30 9a 52 a8 a4 f1 a1  .......g.0.R....
+  3724c0  c0 40 1b 73 1b f2 26 67 c7 70 8e 42 98 8d d3 a1  .@.s..&g.p.B....
+  3724d0  c0 42 99 c9 9b e3 2e 65 c7 30 8a 52 98 85 d3 a1  .B.....e.0.R....
+  3724e0  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  3724f0  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372500  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372510  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372520  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372530  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372540  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372550  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372560  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372570  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372580  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372590  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+
+== dump 0x372b30-0x372c60 (big B-run end) ==
+  372b30  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372b40  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372b50  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372b60  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372b70  c0 08 a5 41 ba 32 0e 0f 81 35 8c 4a a9 ad 57 a0  ...A.2...5.J..W.
+  372b80  c0 28 0d 43 1a a3 0e 25 83 35 0f 42 b9 85 57 a0  .(.C...%.5.B..W.
+  372b90  c0 20 1d 43 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  . .C...%...B..S.
+  372ba0  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372bb0  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  372bc0  69 5d ec e4 06 ef 07 ed c3 b5 9e 42 b9 a5 51 e1  i].........B..Q.
+  372bd0  c0 28 49 02 8b e2 2e 67 c3 3d 84 42 a8 ac f1 a1  .(I....g.=.B....
+  372be0  c0 08 4b 02 1b b3 26 25 c7 3c 84 42 b8 a5 d3 a0  ..K...&%.<.B....
+  372bf0  c0 28 4b 02 1b f3 26 25 c7 3d 84 42 b8 a4 f3 a0  .(K...&%.=.B....
+  372c00  c0 08 c9 02 1b b3 2e 25 c3 3c 80 42 b8 a5 f3 a0  .......%.<.B....
+  372c10  c0 28 c9 02 1b f3 2e 25 c3 3d 80 42 98 a4 d3 a0  .(.....%.=.B....
+  372c20  c0 08 cb 02 1b b3 26 27 c7 3d 90 42 b8 a4 d3 a0  ......&'.=.B....
+  372c30  c0 08 8b 02 9b f3 26 27 c7 3d 80 42 98 85 d3 a1  ......&'.=.B....
+  372c40  c0 08 09 00 1b f2 2e 67 c7 7d 94 42 b8 ac d3 a1  .......g.}.B....
+  372c50  c0 28 c9 82 8b e3 2e 65 c3 7d 80 42 a8 ad f1 a1  .(.....e.}.B....
+
+== dump 0x73cc0-0x73dc0 ==
+  073cc0  c4 ac db 96 63 e2 31 ee 63 94 a9 a8 1f 90 eb 2f  ....c.1.c....../
+  073cd0  94 b2 5e 87 c2 e1 07 e7 c3 b5 9e 42 a9 a5 53 a0  ..^........B..S.
+  073ce0  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073cf0  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073d00  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073d10  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073d20  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073d30  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073d40  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073d50  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073d60  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073d70  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073d80  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073d90  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073da0  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+  073db0  c0 28 4d 4b 9a e3 06 25 c3 b5 9e 42 a9 a5 53 a0  .(MK...%...B..S.
+
+== checksum relation pass rates ==
+Z1 0x0-0x10000:        n=4096 sum16=0:0.34% xor16=0:0.54% sum15=b15:0.51% xor15=b15:0.54% sum8=b8:0.46% xor8=b8:0.24% halves:0.68%
+Z2 0x1e0000-0x1f0000:  n=4096 sum16=0:0.39% xor16=0:0.39% sum15=b15:0.34% xor15=b15:0.39% sum8=b8:0.29% xor8=b8:0.39% halves:0.27%
+Z3 0x368000-0x378000:  n=4096 sum16=0:0.27% xor16=0:12.28% sum15=b15:0.42% xor15=b15:12.28% sum8=b8:0.29% xor8=b8:0.34% halves:12.21%
+Z4 0x200000-0x210000:  n=4096 sum16=0:0.39% xor16=0:0.39% sum15=b15:0.42% xor15=b15:0.39% sum8=b8:0.39% xor8=b8:0.49% halves:0.46%
+
+== address-XOR descramble tests (64KB samples) ==
+sample head raw: strings>=6 86 kw 0
+  i&255: strings>=6 88 kw 0
+  (i>>8)&255: strings>=6 93 kw 0
+  (i*0x5d)&255: strings>=6 111 kw 0
+  (i>>4)&255: strings>=6 110 kw 0
+sample tail raw: strings>=6 92 kw 0
+  i&255: strings>=6 120 kw 0
+  (i>>8)&255: strings>=6 76 kw 0
+  (i*0x5d)&255: strings>=6 80 kw 0
+  (i>>4)&255: strings>=6 76 kw 0
+
+== per-position majority (byte / low-nibble / high-nibble) ==
+0x0-0x4000:      p0:80(13%) lo=0(51%) hi=8(23%)  p1:28(13%) lo=8(43%) hi=a(23%)  p2:4d(9%) lo=d(28%) hi=4(23%)  p3:4b(19%) lo=b(42%) hi=4(39%)  p4:9a(14%) lo=a(41%) hi=9(25%)  p5:e3(14%) lo=3(36%) hi=e(39%)  p6:06(10%) lo=6(33%) hi=5(22%)  p7:25(13%) lo=5(31%) hi=2(29%)  p8:c3(12%) lo=3(35%) hi=c(22%)  p9:b5(11%) lo=5(34%) hi=a(28%)  p10:9e(15%) lo=e(27%) hi=9(37%)  p11:42(25%) lo=2(37%) hi=4(54%)  p12:a9(18%) lo=9(34%) hi=a(35%)  p13:a5(11%) lo=5(30%) hi=a(33%)  p14:53(14%) lo=3(29%) hi=5(31%)  p15:a0(20%) lo=0(30%) hi=a(53%)
+0x0-0x100:       p0:c0(38%) lo=0(50%) hi=c(56%)  p1:28(44%) lo=8(69%) hi=2(44%)  p2:4d(38%) lo=d(50%) hi=4(44%)  p3:4b(25%) lo=b(50%) hi=4(50%)  p4:1a(25%) lo=a(50%) hi=1(31%)  p5:e3(31%) lo=3(31%) hi=e(50%)  p6:06(19%) lo=6(63%) hi=0(31%)  p7:25(25%) lo=5(50%) hi=2(44%)  p8:c3(25%) lo=3(44%) hi=c(31%)  p9:b5(19%) lo=5(38%) hi=b(50%)  p10:9e(25%) lo=a(31%) hi=9(50%)  p11:42(19%) lo=2(25%) hi=4(56%)  p12:a9(31%) lo=9(50%) hi=a(56%)  p13:27(19%) lo=5(31%) hi=a(25%)  p14:53(31%) lo=3(38%) hi=5(44%)  p15:a0(44%) lo=0(50%) hi=a(56%)
+0x200000-0x204000: p0:50(1%) lo=5(7%) hi=7(8%)  p1:31(1%) lo=3(8%) hi=3(8%)  p2:f2(1%) lo=a(7%) hi=4(7%)  p3:fc(1%) lo=3(8%) hi=f(8%)  p4:38(1%) lo=d(8%) hi=0(8%)  p5:3a(1%) lo=e(8%) hi=9(8%)  p6:23(1%) lo=2(7%) hi=c(8%)  p7:c2(1%) lo=6(8%) hi=7(7%)  p8:19(1%) lo=c(7%) hi=9(8%)  p9:2e(1%) lo=b(8%) hi=f(8%)  p10:e6(1%) lo=0(7%) hi=e(8%)  p11:3d(1%) lo=9(8%) hi=a(8%)  p12:f7(1%) lo=9(8%) hi=6(8%)  p13:d5(1%) lo=4(8%) hi=d(8%)  p14:4b(1%) lo=1(8%) hi=a(8%)  p15:c1(1%) lo=a(8%) hi=e(8%)
+0x368000-0x36c000: p0:c0(11%) lo=0(16%) hi=c(17%)  p1:ff(9%) lo=8(16%) hi=2(15%)  p2:ff(10%) lo=f(16%) hi=f(15%)  p3:ff(9%) lo=f(15%) hi=4(16%)  p4:ff(9%) lo=a(16%) hi=f(15%)  p5:ff(9%) lo=f(14%) hi=f(14%)  p6:ff(9%) lo=f(14%) hi=0(16%)  p7:25(9%) lo=5(16%) hi=2(16%)  p8:ff(9%) lo=3(15%) hi=c(14%)  p9:ff(10%) lo=f(15%) hi=f(14%)  p10:ff(10%) lo=f(16%) hi=9(14%)  p11:ff(9%) lo=2(14%) hi=4(14%)  p12:ff(10%) lo=9(15%) hi=f(14%)  p13:ff(10%) lo=f(14%) hi=f(15%)  p14:ff(10%) lo=f(16%) hi=f(15%)  p15:ff(10%) lo=f(16%) hi=a(14%)
+0x3724e0-0x3728e0: p0:c0(20%) lo=0(38%) hi=c(27%)  p1:28(18%) lo=8(27%) hi=2(30%)  p2:4d(15%) lo=d(31%) hi=4(22%)  p3:4b(16%) lo=b(32%) hi=4(24%)  p4:9a(16%) lo=b(24%) hi=9(34%)  p5:e3(19%) lo=3(40%) hi=e(27%)  p6:06(27%) lo=6(38%) hi=0(33%)  p7:25(21%) lo=5(39%) hi=2(27%)  p8:c3(23%) lo=3(38%) hi=c(31%)  p9:b5(17%) lo=5(21%) hi=b(31%)  p10:9e(18%) lo=e(24%) hi=9(33%)  p11:42(19%) lo=2(33%) hi=4(29%)  p12:a9(17%) lo=9(34%) hi=a(25%)  p13:a5(27%) lo=5(32%) hi=a(42%)  p14:53(16%) lo=3(35%) hi=5(23%)  p15:a0(21%) lo=0(25%) hi=a(48%)
+
+== 4-byte motif counts ==
+  9ae30625: 2523  first@0x4
+  c0284d4b: 2495  first@0x20
+  802c5d5b: 1484  first@0x375eb0
+  c3b59e42: 2525  first@0x18
+  a9a553a0: 2495  first@0x5c
+  39a5d3a2: 1484  first@0x375eac
+  a9a553: 2512  first@0x5c
+  0625: 2805  first@0x6

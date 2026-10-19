@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#0A0D13</color>
+    <color name="txt">#F2F5FA</color>
+    <color name="muted">#98A2B3</color>
+    <color name="tile_label">#C6CFDC</color>
+    <color name="accent">#4F7CFF</color>
+    <color name="accent2">#9B5CFF</color>
+    <color name="over_line">#9FB4FF</color>
+</resources>

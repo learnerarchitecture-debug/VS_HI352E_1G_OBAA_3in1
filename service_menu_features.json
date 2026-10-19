@@ -1,0 +1,524 @@
+{
+  "version": "1.0",
+  "description": "Android TV Service Menu Features - Comprehensive feature list for integration into service menu software",
+  "excluded": ["White Balance Wizard (2-point / 10-point grayscale calibration)"],
+  "categories": {
+    "display_calibration": {
+      "name": "Display & Calibration",
+      "features": [
+        {
+          "id": "color_volume_gamut_mapping",
+          "name": "Color Volume / Gamut Mapping",
+          "description": "BT.709 / DCI-P3 / BT.2020 switch + manual CMS (6-axis + white) with live Delta-E.",
+          "category": "display_calibration",
+          "priority": "high"
+        },
+        {
+          "id": "hdr_tone_mapping_editor",
+          "name": "HDR Tone-Mapping Editor",
+          "description": "Per-nit curve editor (PQ/HLG) with live preview; save per HDR format.",
+          "category": "display_calibration",
+          "priority": "high"
+        },
+        {
+          "id": "oled_aging_compensation",
+          "name": "OLED/LED Panel Aging Compensation",
+          "description": "Pixel shift, logo luminance limiter, pixel refresh scheduler, voltage offset per zone.",
+          "category": "display_calibration",
+          "priority": "high"
+        },
+        {
+          "id": "gamma_eotf_selector",
+          "name": "Gamma / EOTF Selector",
+          "description": "1.8 / 2.0 / 2.2 / 2.4 / BT.1886 / ST.2084 / HLG; per-picture-mode.",
+          "category": "display_calibration",
+          "priority": "medium"
+        },
+        {
+          "id": "local_dimming_visualizer",
+          "name": "Local Dimming Zone Visualizer",
+          "description": "Real-time heatmap of active zones + manual zone gain/offset.",
+          "category": "display_calibration",
+          "priority": "high"
+        },
+        {
+          "id": "pixel_uniformity_correction",
+          "name": "Pixel-Level Uniformity Correction",
+          "description": "5×5 / 9×9 grid DDC/CI upload; stores LUT in panel EEPROM.",
+          "category": "display_calibration",
+          "priority": "high"
+        },
+        {
+          "id": "motion_clarity_tuner",
+          "name": "Motion Clarity Tuner",
+          "description": "BFI duty cycle, MPRT target, LED scanning backlight phase.",
+          "category": "display_calibration",
+          "priority": "medium"
+        }
+      ]
+    },
+    "audio_acoustics": {
+      "name": "Audio & Acoustics",
+      "features": [
+        {
+          "id": "speaker_impedance_sweep",
+          "name": "Speaker Impedance / T&S Parameter Sweep",
+          "description": "Measures Re, Fs, Qts, Vas; auto-generates DSP EQ preset.",
+          "category": "audio_acoustics",
+          "priority": "high"
+        },
+        {
+          "id": "room_eq_wizard",
+          "name": "Room EQ Wizard Integration",
+          "description": "USB mic → 8-point sweep → auto-generates parametric EQ (PEQ + FIR).",
+          "category": "audio_acoustics",
+          "priority": "high"
+        },
+        {
+          "id": "bass_management_editor",
+          "name": "Bass Management Crossover Editor",
+          "description": "Per-channel HPF/LPF (12/24/48 dB/oct), delay, gain; saves per input.",
+          "category": "audio_acoustics",
+          "priority": "high"
+        },
+        {
+          "id": "dialog_enhancement_profiles",
+          "name": "Dialog Enhancement Profiles",
+          "description": "Clear Voice I/II/III + custom center-channel boost + dynamic range.",
+          "category": "audio_acoustics",
+          "priority": "medium"
+        },
+        {
+          "id": "lip_sync_calibration",
+          "name": "Lip-Sync Auto-Calibration",
+          "description": "HDMI ARC/eARC loopback test → auto-adjusts audio delay per input.",
+          "category": "audio_acoustics",
+          "priority": "high"
+        },
+        {
+          "id": "speaker_protection_limiter",
+          "name": "Speaker Protection Limiter",
+          "description": "Real-time excursion/thermal model; sets max voltage per driver.",
+          "category": "audio_acoustics",
+          "priority": "high"
+        }
+      ]
+    },
+    "rf_connectivity": {
+      "name": "RF / Connectivity Diagnostics",
+      "features": [
+        {
+          "id": "wifi_spectrum_analyzer",
+          "name": "Wi-Fi 6E / 7 Spectrum Analyzer",
+          "description": "Real-time FFT (2.4/5/6 GHz); channel utilization, interference map.",
+          "category": "rf_connectivity",
+          "priority": "high"
+        },
+        {
+          "id": "bluetooth_antenna_tuning",
+          "name": "Bluetooth Antenna Tuning",
+          "description": "RSSI sweep per antenna; diversity selection override.",
+          "category": "rf_connectivity",
+          "priority": "medium"
+        },
+        {
+          "id": "hdmi_compliance_test",
+          "name": "HDMI 2.1 Compliance Test",
+          "description": "FRL rate, DSC, VRR, ALLM, QMS, SBTM verification per port.",
+          "category": "rf_connectivity",
+          "priority": "high"
+        },
+        {
+          "id": "cec_bus_analyzer",
+          "name": "CEC Bus Analyzer",
+          "description": "Live CEC frame capture/decode; device type, power status, vendor ID.",
+          "category": "rf_connectivity",
+          "priority": "high"
+        },
+        {
+          "id": "ethernet_diagnostics",
+          "name": "Ethernet Cable Diagnostics",
+          "description": "TDR cable length, pair skew, PoE voltage/current.",
+          "category": "rf_connectivity",
+          "priority": "medium"
+        },
+        {
+          "id": "coexistence_manager",
+          "name": "Wi-Fi/Bluetooth Coexistence Manager",
+          "description": "TDM slot viewer, priority override, throughput test.",
+          "category": "rf_connectivity",
+          "priority": "medium"
+        }
+      ]
+    },
+    "system_health": {
+      "name": "System Health & Reliability",
+      "features": [
+        {
+          "id": "emmc_health_dashboard",
+          "name": "eMMC/UFS Health Dashboard",
+          "description": "Life used %, reserved blocks, bad block count, erase count, temperature history.",
+          "category": "system_health",
+          "priority": "high"
+        },
+        {
+          "id": "thermal_zone_map",
+          "name": "Thermal Zone Map",
+          "description": "All trip points (passive/active/critical), hysteresis, fan curves per zone.",
+          "category": "system_health",
+          "priority": "high"
+        },
+        {
+          "id": "dvfs_table_editor",
+          "name": "CPU/GPU DVFS Table Editor",
+          "description": "Freq/volt tables per OPP; thermal throttle points; per-app boost overrides.",
+          "category": "system_health",
+          "priority": "high"
+        },
+        {
+          "id": "reset_reason_log",
+          "name": "Watchdog / Reset Reason Log",
+          "description": "Last 10 resets: POR, WDT, kernel panic, thermal, user, OTA, kernel oops.",
+          "category": "system_health",
+          "priority": "high"
+        },
+        {
+          "id": "power_rail_monitor",
+          "name": "Power Rail Monitor",
+          "description": "PMIC rails: voltage, current, efficiency, ripple; alert thresholds.",
+          "category": "system_health",
+          "priority": "medium"
+        },
+        {
+          "id": "dram_margin_test",
+          "name": "DRAM Margin Test",
+          "description": "Built-in MemTest86+ style; per-rank voltage/timing margin sweep.",
+          "category": "system_health",
+          "priority": "high"
+        }
+      ]
+    },
+    "security_provisioning": {
+      "name": "Security & Provisioning",
+      "features": [
+        {
+          "id": "secure_boot_key_management",
+          "name": "Secure Boot Key Management",
+          "description": "View/rotate AVB/Verity keys; OEM unlock toggle (with tamper-evident counter).",
+          "category": "security_provisioning",
+          "priority": "high"
+        },
+        {
+          "id": "widevine_keybox_provisioning",
+          "name": "Widevine / PlayReady Keybox Provisioning",
+          "description": "L1/L3 keybox inject, HDCP 2.3 key exchange test.",
+          "category": "security_provisioning",
+          "priority": "high"
+        },
+        {
+          "id": "anti_rollback_manager",
+          "name": "Anti-Rollback Index Manager",
+          "description": "View/set anti-rollback version per partition; force-upgrade protection.",
+          "category": "security_provisioning",
+          "priority": "high"
+        },
+        {
+          "id": "frp_bypass",
+          "name": "Factory Reset Protection (FRP) Bypass",
+          "description": "Authorized service token (signed JWT) for authorized reset.",
+          "category": "security_provisioning",
+          "priority": "medium"
+        },
+        {
+          "id": "tee_diagnostics",
+          "name": "TEE / TrustZone Diagnostics",
+          "description": "TEE version, TA list, shared memory usage, keystore health.",
+          "category": "security_provisioning",
+          "priority": "medium"
+        }
+      ]
+    },
+    "manufacturing": {
+      "name": "Manufacturing / Production",
+      "features": [
+        {
+          "id": "automated_burn_in",
+          "name": "Automated Burn-In Script",
+          "description": "CPU/GPU/DRAM/Flash/Network stress + thermal soak + log upload.",
+          "category": "manufacturing",
+          "priority": "high"
+        },
+        {
+          "id": "serial_mac_writer",
+          "name": "Serial Number / MAC / BT Addr Writer",
+          "description": "One-time OTP write; locks after verify.",
+          "category": "manufacturing",
+          "priority": "high"
+        },
+        {
+          "id": "panel_edid_writer",
+          "name": "Panel ID / EDID Writer",
+          "description": "Auto-read panel VESA block → writes to EEPROM + verifies.",
+          "category": "manufacturing",
+          "priority": "high"
+        },
+        {
+          "id": "golden_image_hash",
+          "name": "Golden Image Hash",
+          "description": "SHA-256 of each partition; QR code for line scan.",
+          "category": "manufacturing",
+          "priority": "high"
+        },
+        {
+          "id": "aging_mode",
+          "name": "Aging Mode",
+          "description": "72h loop: video + audio + network + thermal cycle; logs to USB.",
+          "category": "manufacturing",
+          "priority": "medium"
+        }
+      ]
+    },
+    "field_service": {
+      "name": "Field Service Tools",
+      "features": [
+        {
+          "id": "log_dumper",
+          "name": "Logcat / Dmesg / Kernel Ring Buffer Dumper",
+          "description": "Save last 1 MB to USB (no ADB).",
+          "category": "field_service",
+          "priority": "high"
+        },
+        {
+          "id": "framebuffer_dump",
+          "name": "Screenshot / Framebuffer Dump",
+          "description": "Raw RGB + metadata (HDR metadata, color space).",
+          "category": "field_service",
+          "priority": "high"
+        },
+        {
+          "id": "edid_hdcp_dump",
+          "name": "EDID / HDCP / HDMI 2.1 Capability Dump",
+          "description": "Save to USB as text/JSON.",
+          "category": "field_service",
+          "priority": "high"
+        },
+        {
+          "id": "remote_code_capture",
+          "name": "Remote Control IR/Bluetooth Code Capture",
+          "description": "Learn/test codes; export .ir / .bt files.",
+          "category": "field_service",
+          "priority": "medium"
+        },
+        {
+          "id": "factory_reset_preserve",
+          "name": "Factory Reset with Data Preservation",
+          "description": "Wipes /data but keeps /data/media (photos/videos).",
+          "category": "field_service",
+          "priority": "high"
+        },
+        {
+          "id": "usb_host_test",
+          "name": "USB OTG Host Mode Test",
+          "description": "Enumerates devices; runs USB-IF compliance subset.",
+          "category": "field_service",
+          "priority": "medium"
+        }
+      ]
+    },
+    "service_menu_ux": {
+      "name": "Service Menu UX",
+      "features": [
+        {
+          "id": "searchable_menu",
+          "name": "Searchable Menu",
+          "description": "Fuzzy search (type on remote/keyboard) → highlights items.",
+          "category": "service_menu_ux",
+          "priority": "high"
+        },
+        {
+          "id": "qr_code_export",
+          "name": "QR Code Export",
+          "description": "Scan to upload logs/EDID/calibration to cloud.",
+          "category": "service_menu_ux",
+          "priority": "high"
+        },
+        {
+          "id": "profile_import_export",
+          "name": "Profile Import/Export",
+          "description": "JSON/YAML for calibration, EQ, network, display settings.",
+          "category": "service_menu_ux",
+          "priority": "high"
+        },
+        {
+          "id": "contextual_help",
+          "name": "Contextual Help",
+          "description": "Long-press → video tooltip (stored in /vendor/service_help/).",
+          "category": "service_menu_ux",
+          "priority": "medium"
+        },
+        {
+          "id": "audit_trail",
+          "name": "Audit Trail",
+          "description": "Timestamped log of every changed value (who/what/when).",
+          "category": "service_menu_ux",
+          "priority": "high"
+        }
+      ]
+    },
+    "safety_guards": {
+      "name": "Safety Guards",
+      "features": [
+        {
+          "id": "write_protected_nvram",
+          "name": "Write-Protected NVRAM Regions",
+          "description": "Prevents bricking panel/PCIe config.",
+          "category": "safety_guards",
+          "priority": "critical"
+        },
+        {
+          "id": "change_confirmation",
+          "name": "Change Confirmation Dialog",
+          "description": "\"This may damage panel. Type CONFIRM to proceed.\"",
+          "category": "safety_guards",
+          "priority": "critical"
+        },
+        {
+          "id": "auto_revert_timer",
+          "name": "Auto-Revert Timer",
+          "description": "Reverts uncommitted changes after 5 min idle.",
+          "category": "safety_guards",
+          "priority": "high"
+        },
+        {
+          "id": "rollback_snapshot",
+          "name": "Rollback Snapshot",
+          "description": "Auto-snapshot before any NVRAM write; one-tap revert.",
+          "category": "safety_guards",
+          "priority": "critical"
+        },
+        {
+          "id": "hardware_interlock",
+          "name": "Hardware Interlock",
+          "description": "Requires service dongle (USB-C with signed cert) for write access.",
+          "category": "safety_guards",
+          "priority": "critical"
+        }
+      ]
+    }
+  },
+  "access_control": {
+    "levels": [
+      {
+        "level": "user",
+        "name": "User",
+        "access": "View only",
+        "auth": "None"
+      },
+      {
+        "level": "installer",
+        "name": "Installer",
+        "access": "Calibration, CEC, HDMI",
+        "auth": "PIN (default 0000)"
+      },
+      {
+        "level": "service",
+        "name": "Service",
+        "access": "All calibration, logs, CEC, HDMI, Audio",
+        "auth": "Signed service token (USB dongle)"
+      },
+      {
+        "level": "factory",
+        "name": "Factory",
+        "access": "NVRAM write, key provisioning, burn-in",
+        "auth": "Hardware dongle (signed cert)"
+      }
+    ]
+  },
+  "top_10_high_impact": [
+    {
+      "rank": 1,
+      "feature": "CEC Bus Analyzer",
+      "description": "Live CEC frame capture/decode; device type, power status, vendor ID.",
+      "time_saved": "20 min → 1 min"
+    },
+    {
+      "rank": 2,
+      "feature": "HDMI 2.1 Compliance Test",
+      "description": "FRL rate, DSC, VRR, ALLM, QMS, SBTM verification per port.",
+      "time_saved": "30 min → 2 min"
+    },
+    {
+      "rank": 3,
+      "feature": "Wi-Fi Spectrum Analyzer",
+      "description": "Real-time FFT (2.4/5/6 GHz); channel utilization, interference map.",
+      "time_saved": "15 min → 30 sec"
+    },
+    {
+      "rank": 4,
+      "feature": "eMMC Health + Remaining Life",
+      "description": "Life used %, reserved blocks, bad block count, erase count, temperature history.",
+      "time_saved": "10 min → instant"
+    },
+    {
+      "rank": 5,
+      "feature": "Auto Lip-Sync Calibration",
+      "description": "HDMI ARC/eARC loopback test → auto-adjusts audio delay per input.",
+      "time_saved": "10 min → 10 sec"
+    },
+    {
+      "rank": 6,
+      "feature": "Panel Uniformity Upload",
+      "description": "5×5 / 9×9 grid DDC/CI upload; stores LUT in panel EEPROM.",
+      "time_saved": "45 min → 5 min"
+    },
+    {
+      "rank": 7,
+      "feature": "CEC Device Map",
+      "description": "Visual tree: TV → Soundbar → STB → Console. Tap any node → power/volume/input control.",
+      "time_saved": "15 min → 30 sec"
+    },
+    {
+      "rank": 8,
+      "feature": "Thermal Zone Map + Fan Curve",
+      "description": "All trip points (passive/active/critical), hysteresis, fan curves per zone.",
+      "time_saved": "10 min → 1 min"
+    },
+    {
+      "rank": 9,
+      "feature": "Reset Reason Log",
+      "description": "Last 10 resets: POR, WDT, kernel panic, thermal, user, OTA, kernel oops.",
+      "time_saved": "5 min → instant"
+    },
+    {
+      "rank": 10,
+      "feature": "Auto Lip-Sync Calibration",
+      "description": "HDMI ARC/eARC loopback test → auto-adjusts audio delay per input.",
+      "time_saved": "10 min → 10 sec"
+    }
+  ],
+  "safety_guards_summary": {
+    "critical": [
+      "Write-Protected NVRAM Regions",
+      "Change Confirmation Dialog",
+      "Rollback Snapshot",
+      "Hardware Interlock"
+    ],
+    "high": [
+      "Auto-Revert Timer"
+    ]
+  },
+  "access_control_summary": {
+    "levels": 4,
+    "default_pin": "0000",
+    "service_token": "Signed JWT on USB dongle",
+    "factory_token": "Hardware dongle with signed certificate"
+  },
+  "metadata": {
+    "generated": "2026-10-19",
+    "version": "1.0",
+    "excluded_features": ["White Balance Wizard (2-point / 10-point grayscale calibration)"],
+    "total_features": 54,
+    "categories": 9,
+    "access_levels": 4
+  }
+}
