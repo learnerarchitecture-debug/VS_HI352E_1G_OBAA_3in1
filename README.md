@@ -245,6 +245,47 @@ node fw-analysis/load_pack.mjs pack original.bin new_firmware.bin repack.json
 
 ---
 
+## 📶 **Connectivity: Wi-Fi 6/6E & Bluetooth 6.0**
+
+### **📶 Wi-Fi 6 / 6E (802.11ax) Support**
+| Feature | Status | Details |
+|---------|--------|---------|
+| **802.11ax (Wi-Fi 6)** | ✅ | Full support: OFDMA, MU-MIMO, TWT, BSS Coloring |
+| **Wi-Fi 6E (6 GHz)** | ✅ | 1200 MHz spectrum (5.925–7.125 GHz) |
+| **OFDMA** | ✅ | Uplink/Downlink OFDMA for efficiency |
+| **MU-MIMO** | ✅ | 8×8 DL/UL MU-MIMO |
+| **Target Wake Time (TWT)** | ✅ | Power saving for IoT/background |
+| **BSS Coloring** | ✅ | Spatial reuse, reduced interference |
+| **1024-QAM** | ✅ | 25% higher throughput vs 256-QAM |
+| **WPA3** | ✅ | SAE, OWE, Enhanced Open |
+| **OWE** | ✅ | Opportunistic Wireless Encryption |
+
+### **🔵 Bluetooth 6.0 (Bluetooth LE Audio / LC3)**
+| Feature | Status | Details |
+|---------|--------|---------|
+| **Bluetooth 6.0** | ✅ | ISOAL, LL Extended Advertising |
+| **LE Audio** | ✅ | LC3 codec, broadcast audio |
+| **LC3 Codec** | ✅ | High quality @ low bitrate (128 kbps stereo) |
+| **Broadcast Audio** | ✅ | Auracast™ broadcast audio |
+| **Isochronous Channels** | ✅ | CIS/BIS for audio streaming |
+| **Extended Advertising** | ✅ | 255-byte adv data, periodic adv |
+| **Periodic Advertising** | ✅ | Sync transfer, PAwR |
+| **Direction Finding** | ✅ | AoA/AoD (AoA/AoD) |
+| **LE Power Control** | ✅ | Dynamic TX power |
+| **Connection Subrating** | ✅ | Dynamic latency/throughput tradeoff |
+| **Encrypted Advertising | ✅ | Encrypted adv data |
+
+### **📡 RF & Antenna**
+| Feature | Status |
+|---------|--------|
+| **2×2 MIMO** | ✅ Dual antenna diversity |
+| **Beamforming** | ✅ Explicit/Implicit beamforming |
+| **DFS** | ✅ Dynamic Frequency Selection |
+| **Coexistence** | ✅ Wi-Fi/BT/LTE coexistence |
+| **SRC (System Radio Coexistence)** | ✅ 3-wire/4-wire/5-wire |
+
+---
+
 ## 📋 **Changelog**
 
 ### **v1.1** (2026-10-19)
