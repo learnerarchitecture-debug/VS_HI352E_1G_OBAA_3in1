@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0D12"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_focus_style_title"
+            android:textColor="@color/txt"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Style Selector -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Style"
+            android:textColor="@color/txt"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/style_subtle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/focus_style_subtle"
+                android:textColor="@color/txt"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:background="@drawable/style_unselected"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:id="@+id/style_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/focus_style_bold"
+                android:textColor="@color/txt"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:background="@drawable/style_unselected"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:id="@+id/style_minimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/focus_style_minimal"
+                android:textColor="@color/txt"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:background="@drawable/style_unselected"/>
+        </LinearLayout>
+
+        <!-- Color Picker -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_focus_color"
+            android:textColor="@color/txt"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:id="@+id/color_blue"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#00D4FF"
+                android:layout_marginEnd="12dp"/>
+
+            <View
+                android:id="@+id/color_orange"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#FF6B35"
+                android:layout_marginEnd="12dp"/>
+
+            <View
+                android:id="@+id/color_purple"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#9B5CFF"
+                android:layout_marginEnd="12dp"/>
+
+            <View
+                android:id="@+id/color_green"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#00E676"
+                android:layout_marginEnd="12dp"/>
+
+            <View
+                android:id="@+id/color_red"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#FF3D00"/>
+        </LinearLayout>
+
+        <!-- Scale Slider -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_focus_scale"
+            android:textColor="@color/txt"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/scale_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="115%"
+                android:textColor="@color/txt"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
+
+            <SeekBar
+                android:id="@+id/scale_seek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="50"
+                android:progress="15"/>
+        </LinearLayout>
+
+        <!-- Glow Toggle -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_focus_glow"
+                android:textColor="@color/txt"
+                android:textSize="16sp"/>
+
+            <Switch
+                android:id="@+id/glow_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:text="Done"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_primary"
+            android:textColor="#FFFFFF"
+            android:onClick="finish"/>
+</ScrollView>

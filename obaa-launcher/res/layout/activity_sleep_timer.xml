@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#0A0D12">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_sleep_timer_title"
+        android:textColor="@color/txt"
+        android:textSize="24sp"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/timer_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30:00"
+        android:textColor="@color/txt"
+        android:textSize="64sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btn_5"
+            style="@style/TimerButton"
+            android:text="@string/sleep_timer_5"/>
+
+        <Button
+            android:id="@+id/btn_15"
+            style="@style/TimerButton"
+            android:text="@string/sleep_timer_15"/>
+
+        <Button
+            android:id="@+id/btn_30"
+            style="@style/TimerButton"
+            android:text="@string/sleep_timer_30"/>
+
+        <Button
+            android:id="@+id/btn_60"
+            style="@style/TimerButton"
+            android:text="@string/sleep_timer_60"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btn_120"
+            style="@style/TimerButton"
+            android:text="@string/sleep_timer_120"/>
+
+        <Button
+            android:id="@+id/btn_custom"
+            style="@style/TimerButton"
+            android:text="@string/sleep_timer_custom"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/BtnGhost"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Cancel"/>
+
+        <Button
+            android:id="@+id/btn_start"
+            style="@style/BtnPrimary"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Start Timer"/>
+    </LinearLayout>
+</LinearLayout>

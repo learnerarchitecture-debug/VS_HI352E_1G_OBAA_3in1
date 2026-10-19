@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#0A0D12">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_lock_title"
+        android:textColor="@color/txt"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_lock_subtitle"
+        android:textColor="@color/muted"
+        android:textSize="14sp"
+        android:layout_marginBottom="32dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/pin_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_lock_prompt"
+            android:textColor="@color/txt"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/pin_dot_1"
+                style="@style/PinDot"/>
+
+            <TextView
+                android:id="@+id/pin_dot_2"
+                style="@style/PinDot"/>
+
+            <TextView
+                android:id="@+id/pin_dot_3"
+                style="@style/PinDot"/>
+
+            <TextView
+                android:id="@+id/pin_dot_4"
+                style="@style/PinDot"/>
+
+            <TextView
+                android:id="@+id/pin_dot_5"
+                style="@style/PinDot"/>
+
+            <TextView
+                android:id="@+id/pin_dot_6"
+                style="@style/PinDot"/>
+
+            <TextView
+                android:id="@+id/pin_dot_7"
+                style="@style/PinDot"/>
+
+            <TextView
+                android:id="@+id/pin_dot_8"
+                style="@style/PinDot"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/biometric_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/biometric_prompt"
+        android:textColor="@color/muted"
+        android:textSize="14sp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <!-- Number pad -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btn_1"
+                style="@style/PinButton"
+                android:text="1"/>
+
+            <Button
+                android:id="@+id/btn_2"
+                style="@style/PinButton"
+                android:text="2"/>
+
+            <Button
+                android:id="@+id/btn_3"
+                style="@style/PinButton"
+                android:text="3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btn_4"
+                style="@style/PinButton"
+                android:text="4"/>
+
+            <Button
+                android:id="@+id/btn_5"
+                style="@style/PinButton"
+                android:text="5"/>
+
+            <Button
+                android:id="@+id/btn_6"
+                style="@style/PinButton"
+                android:text="6"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btn_7"
+                style="@style/PinButton"
+                android:text="7"/>
+
+            <Button
+                android:id="@+id/btn_8"
+                style="@style/PinButton"
+                android:text="8"/>
+
+            <Button
+                android:id="@+id/btn_9"
+                style="@style/PinButton"
+                android:text="9"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="@style/PinButton"
+                android:text="Clear"/>
+
+            <Button
+                android:id="@+id/btn_0"
+                style="@style/PinButton"
+                android:text="0"/>
+
+            <Button
+                android:id="@+id/btn_backspace"
+                style="@style/PinButton"
+                android:text="⌫"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
